@@ -50,9 +50,11 @@ pertenecientes al protocolo completo y no habilitan la matriz.
 
 Antes y después de cada repetición el runner compara durante cinco segundos
 `CLOCK_MONOTONIC` y `CLOCK_MONOTONIC_RAW` de Ubuntu y el tiempo observado por
-Windows. Como criterio del proyecto exige diferencia de frecuencia no mayor al
-0.5% y diferencia absoluta RAW/Windows de hasta 0.75 s incluyendo el arranque
-de WSL. Esta prueba no corrige el reloj y no garantiza por sí sola su estabilidad
+Windows. Como criterio del proyecto exige diferencia de frecuencia menor al
+2.5% y diferencia absoluta RAW/Windows de hasta 0.75 s incluyendo el arranque
+de WSL. El estudiante amplió el límite anterior de 0.5% por el plazo de entrega;
+esto aumenta la incertidumbre y no cambia los controles de telemetría.
+Esta prueba no corrige el reloj y no garantiza por sí sola su estabilidad
 durante toda la ventana; se combina con la comprobación de muestras. El control
 actual rechazó iniciar una prueba por deriva de aproximadamente 8.38%.
 

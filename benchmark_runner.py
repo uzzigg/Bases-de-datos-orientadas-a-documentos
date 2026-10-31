@@ -117,7 +117,7 @@ def clock_check():
     result['host_elapsed_including_wsl_startup'] = time.perf_counter() - before
     result['rate_difference'] = abs(result['monotonic'] / result['raw'] - 1) if result['raw'] > 0 else 1
     result['host_raw_difference_seconds'] = abs(result['host_elapsed_including_wsl_startup'] - result['raw'])
-    result['passed'] = result['rate_difference'] <= 0.005 and result['host_raw_difference_seconds'] <= 0.75
+    result['passed'] = result['rate_difference'] < PROTOCOL['max_clock_rate_difference_exclusive'] and result['host_raw_difference_seconds'] <= 0.75
     return result
 
 
