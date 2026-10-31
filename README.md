@@ -13,8 +13,21 @@ Fase 1: infraestructura implementada y verificada con ambos motores en A/B/C.
 Las seis pruebas comprobaron límites, conexión, persistencia tras reinicio y
 métricas en Prometheus. Son pruebas de infraestructura, no resultados Q1/Q2.
 
-Siguiente trabajo: generador, carga de 500,000 órdenes, consultas equivalentes
-y runner. El piloto completo y las 162 corridas siguen pendientes.
+Generador implementado y dataset de 500,000 órdenes creado y verificado.
+Siguiente trabajo: carga en ambos motores, consultas equivalentes y runner.
+El piloto completo y las 162 corridas siguen pendientes.
+
+Para generar el dataset y verificarlo desde la raíz del proyecto:
+
+```powershell
+python synthetic_data_generator.py
+python scripts/verificar_dataset.py
+```
+
+Los archivos se crean en `Otros/dataset/` y el generador no sobrescribe archivos
+existentes. El manifiesto de referencia está en `resultados/dataset_manifest.json`.
+Precios y totales son enteros, con impuestos y descuentos cero: son decisiones
+del generador sintético y deben considerarse al interpretar las conclusiones.
 
 ## Uso de la infraestructura
 

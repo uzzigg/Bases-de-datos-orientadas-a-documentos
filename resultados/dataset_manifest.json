@@ -1,0 +1,25 @@
+{
+  "format": "jsonl-utf8-lf",
+  "generator_version": 1,
+  "seed": 243733,
+  "orders": 500000,
+  "items_total": 1499983,
+  "mean_items": 2.999966,
+  "item_count_distribution": {
+    "1": 100132,
+    "2": 100180,
+    "3": 99371,
+    "4": 100207,
+    "5": 100110
+  },
+  "payment_status_distribution": {
+    "completed": 399743,
+    "failed": 24864,
+    "pending": 75393
+  },
+  "bytes": 430891944,
+  "sha256": "c687f77ad6bd8b060943fe88810501630f0ab81a2c60d55c8e2315e98dc01a15",
+  "timestamp_min_inclusive": "2025-01-01T00:00:00Z",
+  "timestamp_max_exclusive": "2027-01-01T00:00:00Z",
+  "numeric_model": "integer prices and totals; zero tax and discounts"
+}
