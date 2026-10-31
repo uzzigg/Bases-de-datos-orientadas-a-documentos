@@ -3,8 +3,10 @@ import argparse
 import decimal
 import json
 import re
+import sys
 from pathlib import Path
 
+sys.dont_write_bytecode = True
 from cargar_datos import env_vars, ROOT
 
 QUERY = ROOT / 'queries'

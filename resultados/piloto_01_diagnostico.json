@@ -1,0 +1,26 @@
+{
+  "scope": "Diagnóstico del piloto; no usar como resultado válido de rendimiento",
+  "run_id": "piloto_mongo_q1_01",
+  "engine": "mongodb",
+  "profile": "PROFILE_A_BASELINE",
+  "query_id": "Q1",
+  "concurrency": 1,
+  "durations_seconds": {"warmup": 60, "measurement": 300, "cooldown": 60},
+  "successful_completions_in_window": 223,
+  "latency_samples_fully_inside_window": 222,
+  "telemetry": {"samples_per_series": 270, "coverage": 0.9, "max_gap_seconds": 4.338, "series": ["rss", "cpu", "cadvisor_up"]},
+  "profiler": {"level_after_run": 0, "overlapping_operations": 224, "missing_profile_markers": 0, "spilled_markers": 0},
+  "outcome": "no_aprobado",
+  "reason": "Huecos mayores a 2.5 s en telemetría y anomalía temporal WSL/Windows; no iniciar matriz.",
+  "clock_diagnostic": {
+    "timesyncd_initial": "active",
+    "timesyncd_restored": "active",
+    "temporary_stop_seconds_approx": 40,
+    "observed_guest_minus_host_ms": [1204.5, -227.0, -749.5, -1254.5, -1753.5, -2274.5, -2785.0, -3287.5],
+    "interval_approx_seconds": 5,
+    "guest_sleep_20_seconds": {"monotonic": 20.0, "monotonic_raw": 22.222, "realtime": 23.336, "windows_elapsed_including_process_start": 22.369},
+    "adjtimex_readonly": {"tick_microseconds": 9162, "user_hz": 100, "frequency_ppm": 10.167205810546875},
+    "limitation": "Pruebas diagnósticas puntuales; no establecen por sí solas la causa exacta ni una reparación segura."
+  },
+  "raw_evidence": "Otros/benchmarks/piloto_mongo_q1_01/ y Otros/benchmarks/diagnostico_reloj_01.json"
+}

@@ -2,10 +2,12 @@
 import datetime as dt
 import json
 import statistics
+import sys
 import time
 import urllib.parse
 from pathlib import Path
 
+sys.dont_write_bytecode = True
 from verify_stack import fetch, read_env, run
 
 root = Path(__file__).resolve().parents[1]
