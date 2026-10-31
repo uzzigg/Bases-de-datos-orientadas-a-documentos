@@ -9,8 +9,39 @@ Fase 0: verificaciones previas realizadas. Docker Desktop, Ubuntu en WSL2,
 cgroups v2, límites A/B/C, contadores de CPU y limpieza de caché comprobados.
 La integración de telemetría y la viabilidad bajo carga requieren el piloto.
 
-Fase siguiente: construir Docker Compose, monitoreo y consultas equivalentes.
-Los comandos de ejecución se incorporarán cuando estén implementados y probados.
+Fase 1: infraestructura implementada y verificada con ambos motores en A/B/C.
+Las seis pruebas comprobaron límites, conexión, persistencia tras reinicio y
+métricas en Prometheus. Son pruebas de infraestructura, no resultados Q1/Q2.
+
+Siguiente trabajo: generador, carga de 500,000 órdenes, consultas equivalentes
+y runner. El piloto completo y las 162 corridas siguen pendientes.
+
+## Uso de la infraestructura
+
+Requisitos: Docker Desktop activo con WSL2 y Python 3 para las verificaciones.
+
+```powershell
+.\scripts\iniciar_entorno.ps1
+.\scripts\stack.ps1 -Action Up -Engine mongo -Profile A
+.\scripts\stack.ps1 -Action Status -Engine mongo -Profile A
+```
+
+Para usar PostgreSQL y cambiar al perfil severo:
+
+```powershell
+.\scripts\stack.ps1 -Action Up -Engine postgres -Profile C
+```
+
+El script detiene el motor opuesto y conserva los volúmenes. Para detener todo:
+
+```powershell
+.\scripts\stack.ps1 -Action Stop
+```
+
+Prometheus: http://127.0.0.1:9090. PostgreSQL: 127.0.0.1:55432.
+Credenciales aleatorias locales en `.env`, excluido de Git.
+Ver [instrucciones y decisiones de infraestructura](docs/infraestructura.md) y
+[resumen de verificaciones](resultados/verificacion_fase1.json).
 
 ## Organización
 

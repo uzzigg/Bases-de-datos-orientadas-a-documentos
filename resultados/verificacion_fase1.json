@@ -1,0 +1,296 @@
+{
+  "scope": "Phase 1 infrastructure integration; not workload benchmark results",
+  "generated_at_utc": "2026-10-31T06:20:35.406036+00:00",
+  "checks_passed": 6,
+  "checks": [
+    {
+      "engine": "mongodb",
+      "profile": "A",
+      "engine_version": "9.0.4",
+      "image_id": "sha256:714cc3db1e396e5a464b8443ccde50e53283368809401f53f1997b684ddb5be0",
+      "started_at_utc": "2026-10-31T06:14:07.098518+00:00",
+      "finished_at_utc": "2026-10-31T06:14:13.298502+00:00",
+      "persistence_after_restart": true,
+      "passed": true,
+      "targets": [
+        {
+          "job": "cadvisor",
+          "health": "up",
+          "scrape_interval": "1s"
+        },
+        {
+          "job": "node-exporter",
+          "health": "up",
+          "scrape_interval": "1s"
+        },
+        {
+          "job": "prometheus",
+          "health": "up",
+          "scrape_interval": "1s"
+        }
+      ],
+      "limits": {
+        "cpus": 4,
+        "memory_mib": 4096,
+        "swap_bytes": 0
+      },
+      "verified_metrics": [
+        "container_cpu_cfs_throttled_seconds_total",
+        "container_cpu_usage_seconds_total",
+        "container_last_seen",
+        "container_memory_rss",
+        "node_disk_read_bytes_total",
+        "node_memory_MemAvailable_bytes",
+        "node_vmstat_pswpin",
+        "node_vmstat_pswpout"
+      ]
+    },
+    {
+      "engine": "mongodb",
+      "profile": "B",
+      "engine_version": "9.0.4",
+      "image_id": "sha256:714cc3db1e396e5a464b8443ccde50e53283368809401f53f1997b684ddb5be0",
+      "started_at_utc": "2026-10-31T06:14:52.339115+00:00",
+      "finished_at_utc": "2026-10-31T06:15:04.689119+00:00",
+      "persistence_after_restart": true,
+      "passed": true,
+      "targets": [
+        {
+          "job": "cadvisor",
+          "health": "up",
+          "scrape_interval": "1s"
+        },
+        {
+          "job": "node-exporter",
+          "health": "up",
+          "scrape_interval": "1s"
+        },
+        {
+          "job": "prometheus",
+          "health": "up",
+          "scrape_interval": "1s"
+        }
+      ],
+      "limits": {
+        "cpus": 2,
+        "memory_mib": 2048,
+        "swap_bytes": 0
+      },
+      "verified_metrics": [
+        "container_cpu_cfs_throttled_seconds_total",
+        "container_cpu_usage_seconds_total",
+        "container_last_seen",
+        "container_memory_rss",
+        "node_disk_read_bytes_total",
+        "node_memory_MemAvailable_bytes",
+        "node_vmstat_pswpin",
+        "node_vmstat_pswpout"
+      ]
+    },
+    {
+      "engine": "mongodb",
+      "profile": "C",
+      "engine_version": "9.0.4",
+      "image_id": "sha256:714cc3db1e396e5a464b8443ccde50e53283368809401f53f1997b684ddb5be0",
+      "started_at_utc": "2026-10-31T06:15:16.120401+00:00",
+      "finished_at_utc": "2026-10-31T06:15:28.196170+00:00",
+      "persistence_after_restart": true,
+      "passed": true,
+      "targets": [
+        {
+          "job": "cadvisor",
+          "health": "up",
+          "scrape_interval": "1s"
+        },
+        {
+          "job": "node-exporter",
+          "health": "up",
+          "scrape_interval": "1s"
+        },
+        {
+          "job": "prometheus",
+          "health": "up",
+          "scrape_interval": "1s"
+        }
+      ],
+      "limits": {
+        "cpus": 1,
+        "memory_mib": 1024,
+        "swap_bytes": 0
+      },
+      "verified_metrics": [
+        "container_cpu_cfs_throttled_seconds_total",
+        "container_cpu_usage_seconds_total",
+        "container_last_seen",
+        "container_memory_rss",
+        "node_disk_read_bytes_total",
+        "node_memory_MemAvailable_bytes",
+        "node_vmstat_pswpin",
+        "node_vmstat_pswpout"
+      ]
+    },
+    {
+      "engine": "postgresql",
+      "profile": "A",
+      "engine_version": "18.6 (Debian 18.6-1.pgdg13+2)",
+      "image_id": "sha256:979bccfde35445db618c65107d27d08c6c21339d8dc3ad4c830c6633947be0e4",
+      "started_at_utc": "2026-10-31T06:14:41.034404+00:00",
+      "finished_at_utc": "2026-10-31T06:14:52.187455+00:00",
+      "persistence_after_restart": true,
+      "passed": true,
+      "targets": [
+        {
+          "job": "cadvisor",
+          "health": "up",
+          "scrape_interval": "1s"
+        },
+        {
+          "job": "node-exporter",
+          "health": "up",
+          "scrape_interval": "1s"
+        },
+        {
+          "job": "prometheus",
+          "health": "up",
+          "scrape_interval": "1s"
+        }
+      ],
+      "limits": {
+        "cpus": 4,
+        "memory_mib": 4096,
+        "swap_bytes": 0
+      },
+      "verified_metrics": [
+        "container_cpu_cfs_throttled_seconds_total",
+        "container_cpu_usage_seconds_total",
+        "container_last_seen",
+        "container_memory_rss",
+        "node_disk_read_bytes_total",
+        "node_memory_MemAvailable_bytes",
+        "node_vmstat_pswpin",
+        "node_vmstat_pswpout"
+      ]
+    },
+    {
+      "engine": "postgresql",
+      "profile": "B",
+      "engine_version": "18.6 (Debian 18.6-1.pgdg13+2)",
+      "image_id": "sha256:979bccfde35445db618c65107d27d08c6c21339d8dc3ad4c830c6633947be0e4",
+      "started_at_utc": "2026-10-31T06:15:04.828132+00:00",
+      "finished_at_utc": "2026-10-31T06:15:15.980797+00:00",
+      "persistence_after_restart": true,
+      "passed": true,
+      "targets": [
+        {
+          "job": "cadvisor",
+          "health": "up",
+          "scrape_interval": "1s"
+        },
+        {
+          "job": "node-exporter",
+          "health": "up",
+          "scrape_interval": "1s"
+        },
+        {
+          "job": "prometheus",
+          "health": "up",
+          "scrape_interval": "1s"
+        }
+      ],
+      "limits": {
+        "cpus": 2,
+        "memory_mib": 2048,
+        "swap_bytes": 0
+      },
+      "verified_metrics": [
+        "container_cpu_cfs_throttled_seconds_total",
+        "container_cpu_usage_seconds_total",
+        "container_last_seen",
+        "container_memory_rss",
+        "node_disk_read_bytes_total",
+        "node_memory_MemAvailable_bytes",
+        "node_vmstat_pswpin",
+        "node_vmstat_pswpout"
+      ]
+    },
+    {
+      "engine": "postgresql",
+      "profile": "C",
+      "engine_version": "18.6 (Debian 18.6-1.pgdg13+2)",
+      "image_id": "sha256:979bccfde35445db618c65107d27d08c6c21339d8dc3ad4c830c6633947be0e4",
+      "started_at_utc": "2026-10-31T06:15:28.335331+00:00",
+      "finished_at_utc": "2026-10-31T06:15:39.603861+00:00",
+      "persistence_after_restart": true,
+      "passed": true,
+      "targets": [
+        {
+          "job": "cadvisor",
+          "health": "up",
+          "scrape_interval": "1s"
+        },
+        {
+          "job": "node-exporter",
+          "health": "up",
+          "scrape_interval": "1s"
+        },
+        {
+          "job": "prometheus",
+          "health": "up",
+          "scrape_interval": "1s"
+        }
+      ],
+      "limits": {
+        "cpus": 1,
+        "memory_mib": 1024,
+        "swap_bytes": 0
+      },
+      "verified_metrics": [
+        "container_cpu_cfs_throttled_seconds_total",
+        "container_cpu_usage_seconds_total",
+        "container_last_seen",
+        "container_memory_rss",
+        "node_disk_read_bytes_total",
+        "node_memory_MemAvailable_bytes",
+        "node_vmstat_pswpin",
+        "node_vmstat_pswpout"
+      ]
+    }
+  ],
+  "sampling_verification": {
+    "checked_at_utc": "2026-10-31T06:19:47.119329+00:00",
+    "window_seconds": 20,
+    "series": [
+      {
+        "samples": 20,
+        "median_gap_seconds": 1.0,
+        "max_gap_seconds": 1.001000165939331
+      }
+    ],
+    "last_seen_age_seconds": 1.1059999465942383,
+    "passed": true
+  },
+  "initial_sampling_observation": {
+    "checked_at_utc": "2026-10-31T06:18:25.100901+00:00",
+    "window_seconds": 20,
+    "series": [
+      {
+        "samples": 17,
+        "median_gap_seconds": 1.0,
+        "max_gap_seconds": 4.335000038146973
+      }
+    ],
+    "last_seen_age_seconds": 0.5220000743865967,
+    "passed": false
+  },
+  "adaptations": [
+    "Windows PostgreSQL port 55432",
+    "Read-only host root mount without rslave on Docker Desktop",
+    "Container swap disabled by equal memory and memory+swap limits"
+  ],
+  "pending": [
+    "Dataset generation and loading",
+    "Q1/Q2 correctness",
+    "Spill detection with workload evidence",
+    "Full pilot and 162 benchmark runs"
+  ]
+}

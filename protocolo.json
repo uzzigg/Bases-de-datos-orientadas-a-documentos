@@ -20,6 +20,11 @@
     }
   },
   "monitoring_versions": {"cadvisor": "v0.60.6", "node_exporter": "v1.12.1", "prometheus": "v3.15.1"},
+  "monitoring_images": {
+    "cadvisor": "ghcr.io/google/cadvisor:0.60.6@sha256:b8e7d1093144fd088f425ff003d75a4aa405de075db78dae3bc563730b1bd07a",
+    "node_exporter": "prom/node-exporter:v1.12.1@sha256:1b4e4438faca4dd7e001dd445d161a4a2091b0fededa84093b3a8dfeae1f1be0",
+    "prometheus": "prom/prometheus:v3.15.1@sha256:fa3302279710be2f21a8301ec17a8b4f2301fd829bd113839b3b6b02b6f191a2"
+  },
   "concurrency": [1, 10, 50],
   "repetitions": 3,
   "warmup_seconds": 60,
