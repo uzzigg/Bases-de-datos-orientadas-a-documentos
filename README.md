@@ -14,7 +14,8 @@ Las seis pruebas comprobaron límites, conexión, persistencia tras reinicio y
 métricas en Prometheus. Son pruebas de infraestructura, no resultados Q1/Q2.
 
 Generador implementado y dataset de 500,000 órdenes creado, verificado y cargado
-en ambos motores. Siguiente trabajo: consultas equivalentes y runner.
+en ambos motores. Q1 y Q2 se validaron funcionalmente, con planes de ejecución.
+Siguiente trabajo: runner y piloto de medición.
 El piloto completo y las 162 corridas siguen pendientes.
 
 Para generar el dataset y verificarlo desde la raíz del proyecto:
@@ -33,6 +34,9 @@ Los importadores, requisitos y validaciones de carga se describen en
 [carga de datos](docs/carga_datos.md). Comprueban el hash del archivo maestro
 y se detienen si el destino `orders` ya existe. La comparación de carga usa
 conteos y diez documentos completos por motor; no es exhaustiva.
+
+Las [consultas y su validación](docs/consultas.md) incluyen Q1/Q2 para ambos
+motores, variantes de memoria, resultados comparados y planes seleccionados.
 
 ## Uso de la infraestructura
 

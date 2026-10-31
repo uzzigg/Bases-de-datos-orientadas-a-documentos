@@ -1,0 +1,12 @@
+{
+  "q1_groups": 20,
+  "q1_counts_and_sums_equal": true,
+  "q1_average_absolute_tolerance": "0.00000001",
+  "q2_variants": 4,
+  "q2_rows_each": 1000,
+  "q2_amounts_equal": true,
+  "q2_cutoff": "2719",
+  "q2_rows_above_cutoff": 998,
+  "q2_note": "El manual no especifica desempate; en el corte pueden variar las órdenes empatadas. Se compararon importes, órdenes por encima del corte y datos de IDs comunes.",
+  "scope": "Validación funcional y planes; no son mediciones del benchmark."
+}
