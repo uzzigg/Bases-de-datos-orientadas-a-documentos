@@ -1,0 +1,1 @@
+[{"$match":{"resultado.estado":"finalizada","fecha":{"$gte":"2026-01-01T00:00:00Z"}}},{"$sort":{"resultado.total_kg":-1}},{"$limit":1000},{"$project":{"cosecha_id":1,"productor.id":1,"resultado.total_kg":1}}]

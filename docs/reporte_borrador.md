@@ -1,6 +1,6 @@
 # Comparación de MongoDB y PostgreSQL JSONB
 
-**Borrador en preparación.** Las mediciones de rendimiento y las conclusiones comparativas están pendientes; las pruebas de infraestructura y de equivalencia no son resultados del benchmark.
+**Borrador histórico del caso de órdenes; debe adaptarse al caso agrícola.** Las mediciones previas no son resultados agrícolas. Véase `agricola/README.md`.
 
 ## 1. Equipo y entorno
 

@@ -1,0 +1,1 @@
+[{"$unwind":"$lotes"},{"$match":{"lotes.kg_por_caja":{"$gt":50}}},{"$group":{"_id":{"pais":"$productor.ubicacion.country","cultivo":"$lotes.cultivo"},"total_kg":{"$sum":{"$multiply":["$lotes.cajas","$lotes.kg_por_caja"]}},"promedio_kg":{"$avg":{"$multiply":["$lotes.cajas","$lotes.kg_por_caja"]}},"conteo":{"$sum":1}}}]

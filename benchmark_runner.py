@@ -52,10 +52,10 @@ def worker(index, args, env, start_event, start_value, ready, directory):
             memory = '64MB' if args.query == 'Q2_64MB' else '4MB'
             cur.execute("SELECT set_config('work_mem', %s, false), set_config('statement_timeout','310000',false), pg_backend_pid()", (memory,))
             _, _, pid = cur.fetchone()
-            sql = (ROOT / 'queries' / ('postgres_q1.sql' if args.query == 'Q1' else 'postgres_q2.sql')).read_text(encoding='utf-8')
+            sql = (ROOT / 'agricola' / ('postgres_q1.sql' if args.query == 'Q1' else 'postgres_q2.sql')).read_text(encoding='utf-8')
         else:
             pid = None
-            pipeline = json.loads((ROOT / 'queries' / ('mongo_q1.json' if args.query == 'Q1' else 'mongo_q2.json')).read_text(encoding='utf-8'))
+            pipeline = json.loads((ROOT / 'agricola' / ('mongo_q1.json' if args.query == 'Q1' else 'mongo_q2.json')).read_text(encoding='utf-8'))
         ready.put({'worker': index, 'ready': True, 'pid': pid})
         if not start_event.wait(90):
             raise TimeoutError('No llegó la señal de inicio')
@@ -71,7 +71,7 @@ def worker(index, args, env, start_event, start_value, ready, directory):
                 record = {'marker': marker, 'started': begin, 'phase': 'measurement' if begin >= measure_start else 'warmup'}
                 try:
                     if args.engine == 'mongo':
-                        cursor = connection['document_benchmark'].orders.aggregate(pipeline, allowDiskUse=args.query != 'Q2_NO_DISK', maxTimeMS=310000, comment=marker)
+                        cursor = connection['document_benchmark'].cosechas.aggregate(pipeline, allowDiskUse=args.query != 'Q2_NO_DISK', maxTimeMS=310000, comment=marker)
                         count = sum(1 for _ in cursor)
                     else:
                         cur.execute(f'/* {marker} */ ' + sql)
@@ -179,7 +179,7 @@ def get_spill(args, env, directory, events, measure_epoch, window_end_epoch, pro
         db = client['document_benchmark']
         db.command('profile', 0)
         prefix = f'bench_{args.run_id}_'
-        docs = list(db.system.profile.find({'op': 'command', 'command.aggregate': 'orders', 'command.comment': {'$regex': '^' + re.escape(prefix)}}, {'command.comment': 1, 'usedDisk': 1, 'errCode': 1, '_id': 0}))
+        docs = list(db.system.profile.find({'op': 'command', 'command.aggregate': 'cosechas', 'command.comment': {'$regex': '^' + re.escape(prefix)}}, {'command.comment': 1, 'usedDisk': 1, 'errCode': 1, '_id': 0}))
         matching = {d['command']['comment']: d for d in docs}
         expected = {e['marker'] for e in relevant}
         missing = sorted(expected - matching.keys())
@@ -241,10 +241,10 @@ def main():
             cur.execute('SHOW log_temp_files')
             if cur.fetchone()[0] != '0':
                 raise RuntimeError('log_temp_files debe ser 0')
-            cur.execute('SELECT count(*) FROM public.orders')
+            cur.execute('SELECT count(*) FROM public.cosechas')
             count = cur.fetchone()[0]
     else:
-        count = connection['document_benchmark'].orders.count_documents({})
+        count = connection['document_benchmark'].cosechas.count_documents({})
     connection.close()
     if count != PROTOCOL['dataset']['orders']:
         raise RuntimeError(f'Conteo de órdenes incorrecto: {count}')
@@ -252,7 +252,7 @@ def main():
     (directory / 'clock_preflight.json').write_text(json.dumps(clock_before, indent=2), encoding='utf-8')
     if not clock_before['passed']:
         raise RuntimeError('Reloj WSL inestable: la repetición no se inició; consulte clock_preflight.json')
-    files = ['benchmark_runner.py', 'protocolo.json', 'queries/mongo_q1.json', 'queries/mongo_q2.json', 'queries/postgres_q1.sql', 'queries/postgres_q2.sql']
+    files = ['benchmark_runner.py', 'protocolo.json', 'agricola/mongo_q1.json', 'agricola/mongo_q2.json', 'agricola/postgres_q1.sql', 'agricola/postgres_q2.sql']
     hashes = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in files}
     config = {**vars(args), 'source_sha256': hashes, 'orders_preflight': count, 'image_id': inspect['Image'], 'python_version': sys.version}
     (directory / 'config.json').write_text(json.dumps(config, indent=2), encoding='utf-8')

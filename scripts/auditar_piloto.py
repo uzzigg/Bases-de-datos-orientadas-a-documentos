@@ -52,7 +52,7 @@ def main():
     db = client['document_benchmark']
     profile_status = db.command('profile', -1)['was']
     prefix = 'bench_' + args.run_id + '_'
-    records = list(db.system.profile.find({'op': 'command', 'command.aggregate': 'orders', 'command.comment': {'$regex': '^' + re.escape(prefix)}}, {'command.comment': 1, 'usedDisk': 1, '_id': 0}))
+    records = list(db.system.profile.find({'op': 'command', 'command.aggregate': 'cosechas', 'command.comment': {'$regex': '^' + re.escape(prefix)}}, {'command.comment': 1, 'usedDisk': 1, '_id': 0}))
     by_marker = {r['command']['comment']: r for r in records}
     missing = sorted(expected - by_marker.keys())
     spills = sorted(marker for marker in expected if by_marker.get(marker, {}).get('usedDisk') is True)

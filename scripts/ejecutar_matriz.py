@@ -60,7 +60,7 @@ def main():
         raise RuntimeError('La auditoría independiente del piloto no está aprobada')
     pilot_config = json.loads((home / args.pilot_id / 'config.json').read_text(encoding='utf-8'))
     source_hashes = pilot_config.get('source_sha256', {})
-    expected_paths = {'benchmark_runner.py', 'protocolo.json', 'queries/mongo_q1.json', 'queries/mongo_q2.json', 'queries/postgres_q1.sql', 'queries/postgres_q2.sql'}
+    expected_paths = {'benchmark_runner.py', 'protocolo.json', 'agricola/mongo_q1.json', 'agricola/mongo_q2.json', 'agricola/postgres_q1.sql', 'agricola/postgres_q2.sql'}
     if set(source_hashes) != expected_paths or any(hashlib.sha256((ROOT / name).read_bytes()).hexdigest() != value for name, value in source_hashes.items()):
         raise RuntimeError('El piloto no corresponde al código o protocolo actual; se necesita otro piloto')
     def completed(case, output):
