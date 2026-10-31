@@ -1,5 +1,6 @@
 # Material local y diagnosticos fuera de la entrega
 /Otros/
+/contexto/
 
 # Credenciales y configuracion privada
 .env

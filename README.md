@@ -17,6 +17,7 @@ Los comandos de ejecución se incorporarán cuando estén implementados y probad
 - Código, consultas, configuración y documentación reproducible: en Git.
 - `Otros/`: diagnósticos locales, archivos temporales, dataset masivo y telemetría
   cruda. Esta carpeta queda excluida de Git.
+- `contexto/`: bitácora y punto de continuación local; excluida de Git.
 - Resultados consolidados, CSV finales, planes seleccionados y reporte: se
   versionarán en las carpetas de entrega correspondientes.
 - Credenciales locales: `.env` excluido de Git; la plantilla pública será
