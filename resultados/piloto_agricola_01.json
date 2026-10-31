@@ -1,0 +1,70 @@
+{
+  "scope": "Piloto agrícola, no una repetición de la matriz",
+  "run_id": "piloto_agricola_01",
+  "row": {
+    "timestamp_epoch": 1793475832.154,
+    "engine": "mongodb",
+    "profile": "PROFILE_A_BASELINE",
+    "query_id": "Q1",
+    "concurrency": 1,
+    "run_number": 1,
+    "throughput_qps": 0.856667,
+    "latency_p50_ms": 1165.054,
+    "latency_p95_ms": 1204.388,
+    "latency_p99_ms": 1249.224,
+    "cpu_throttled_seconds": 0.0,
+    "max_rss_mb": 557.457,
+    "disk_spill": "false",
+    "status": "ok"
+  },
+  "phase_seconds": {
+    "warmup": 60,
+    "measurement": 300,
+    "cooldown": 60
+  },
+  "clock_preflight": {
+    "monotonic": 5.000190360999998,
+    "raw": 5.000195544,
+    "host_elapsed_including_wsl_startup": 5.1114712999988114,
+    "rate_difference": 1.0365594619310414e-06,
+    "host_raw_difference_seconds": 0.11127575599881112,
+    "passed": true
+  },
+  "clock_postflight": {
+    "monotonic": 5.00029956000003,
+    "raw": 5.00011443599999,
+    "host_elapsed_including_wsl_startup": 5.10472160000063,
+    "rate_difference": 3.7023952633497004e-05,
+    "host_raw_difference_seconds": 0.1046071640006403,
+    "passed": true
+  },
+  "telemetry": {
+    "rss": [
+      {
+        "samples": 300,
+        "coverage": 1,
+        "max_gap_seconds": 1.004000186920166,
+        "passed": true
+      }
+    ],
+    "cpu": [
+      {
+        "samples": 300,
+        "coverage": 1,
+        "max_gap_seconds": 1.004000186920166,
+        "passed": true
+      }
+    ],
+    "up": [
+      {
+        "samples": 300,
+        "coverage": 1,
+        "max_gap_seconds": 1.004000186920166,
+        "passed": true
+      }
+    ]
+  },
+  "profile_level_after_run": 0,
+  "spill_consistent": true,
+  "approved": true
+}
