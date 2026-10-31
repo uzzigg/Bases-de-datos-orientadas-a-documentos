@@ -1,5 +1,7 @@
 # Runner y protocolo de medición
 
+**Caso vigente: agricultura.** El runner y la auditoría usan `agricola/` y la colección o tabla `cosechas`. Los diagnósticos y ejemplos de órdenes que se describen a continuación son antecedentes; no mezclar sus resultados con la matriz agrícola. El piloto agrícola está en `resultados/piloto_agricola_01.json`.
+
 ## Requisitos y seguridad
 
 El dataset debe estar cargado en ambos motores y el stack Docker debe funcionar.

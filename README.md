@@ -1,9 +1,11 @@
 # Bases de datos orientadas a documentos
 
 Experimento académico de comparación de MongoDB y PostgreSQL JSONB mediante
-agregaciones sobre 500,000 órdenes, con límites de CPU y memoria en Docker.
+agregaciones sobre 500,000 cosechas sintéticas, con límites de CPU y memoria en Docker.
 
-## Estado
+El caso vigente es **producción agrícola**. Véase [caso y consultas agrícolas](agricola/README.md), el [borrador del reporte agrícola](docs/reporte_agricola.md) y el [piloto agrícola auditado](resultados/piloto_agricola_01.json). La matriz agrícola está en curso. El material del caso de órdenes que aparece más abajo es antecedente histórico y sus mediciones no son resultados agrícolas.
+
+## Antecedentes: caso de órdenes
 
 Fase 0: verificaciones previas realizadas. Docker Desktop, Ubuntu en WSL2,
 cgroups v2, límites A/B/C, contadores de CPU y limpieza de caché comprobados.
