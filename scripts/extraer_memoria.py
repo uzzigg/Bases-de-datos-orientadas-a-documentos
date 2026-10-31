@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.dont_write_bytecode = True
 sys.path.insert(0, str(ROOT))
-from benchmark_runner import env_vars, prometheus
+from benchmark_runner import PROTOCOL, env_vars, prometheus
 
 
 def main():
@@ -34,7 +34,7 @@ def main():
             raise RuntimeError(f'No hay una serie válida: {name}')
         stamps = [float(v[0]) for v in series[0]['values']]
         gaps = [b-a for a, b in zip(stamps, stamps[1:])]
-        if len(stamps) / duration < 0.9 or (gaps and max(gaps) > 2.5) or stamps[0] > start + 2.5 or stamps[-1] < end - 2.5:
+        if len(stamps) / duration < 0.9 or (gaps and max(gaps) > PROTOCOL['max_telemetry_gap_seconds']) or stamps[0] > start + 2.5 or stamps[-1] < end - 2.5:
             raise RuntimeError(f'Cobertura insuficiente: {name}')
         extra[name] = series
     result = {'scope': 'Métricas adicionales; uso incluye caché y memoria compartida, no equivale a RSS',

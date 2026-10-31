@@ -8,6 +8,8 @@ from pathlib import Path
 sys.dont_write_bytecode = True
 from cargar_datos import ROOT, env_vars
 
+PROTOCOL = json.loads((ROOT / 'protocolo.json').read_text(encoding='utf-8'))
+
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -35,7 +37,7 @@ def main():
             timestamps = [float(v[0]) for v in values]
             gaps = [b-a for a, b in zip(timestamps, timestamps[1:])]
             coverage = min(1, len(values)/duration)
-            okay = bool(values) and coverage >= 0.9 and (not gaps or max(gaps) <= 2.5)
+            okay = bool(values) and coverage >= 0.9 and (not gaps or max(gaps) <= PROTOCOL['max_telemetry_gap_seconds'])
             okay = okay and timestamps[0] <= start_epoch + 2.5 and timestamps[-1] >= end_epoch - 2.5
             if name == 'up':
                 okay = okay and all(float(v[1]) == 1 for v in values)

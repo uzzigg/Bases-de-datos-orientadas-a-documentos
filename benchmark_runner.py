@@ -315,7 +315,7 @@ def main():
                     samples = series['values']
                     stamps = [float(v[0]) for v in samples]
                     gaps = [b-a for a, b in zip(stamps, stamps[1:])]
-                    if not stamps or len(stamps) / args.measurement < 0.9 or (gaps and max(gaps) > 2.5) or stamps[0] > measure_epoch + 2.5 or stamps[-1] < end_epoch - 2.5:
+                    if not stamps or len(stamps) / args.measurement < 0.9 or (gaps and max(gaps) > PROTOCOL['max_telemetry_gap_seconds']) or stamps[0] > measure_epoch + 2.5 or stamps[-1] < end_epoch - 2.5:
                         raise RuntimeError(f'Cobertura insuficiente o huecos en {name}: {len(stamps)} muestras')
                     if name in ('up', 'node_up') and any(float(v[1]) != 1 for v in samples):
                         raise RuntimeError(f'Recolector inactivo: {name}')
