@@ -25,6 +25,15 @@ la deriva persistió durante esa prueba. Los datos y su alcance se documentan en
 `resultados/piloto_01_diagnostico.json`. No se debe iniciar la matriz hasta
 comprobar un reloj estable y repetir un piloto completo con el runner actual.
 
+Después de reiniciar WSL por autorización del usuario, el reloj pasó una prueba
+de 45 s, pero el segundo piloto completo volvió a fallar: 277 muestras/300 s,
+hueco máximo 3.730 s y diferencia final MONOTONIC/RAW de 8.33%. La auditoría
+lo rechazó y comprobó que el profiler volvió a nivel 0. Windows Time informó
+`Local CMOS Clock` y estado no sincronizado; consultas puntuales a los servidores
+de tiempo de Microsoft y Google indicaron ambos aproximadamente +4.29 s frente a
+Windows. Es una hipótesis a investigar, no una causa demostrada. Ver
+`resultados/piloto_02_diagnostico.json`. No se cambió el reloj de Windows.
+
 ## Una repetición
 
 ```powershell
@@ -63,6 +72,16 @@ tienen menos del 90% de cobertura, hay un hueco superior a 2.5 s, faltan
 muestras en los extremos o cAdvisor/Node Exporter aparecen inactivos.
 Se conserva el vector completo para auditoría; revisar también CPU, fronteras
 y otros recolectores en el piloto y al aceptar cada ventana.
+
+Además se conservan `container_memory_usage_bytes`, `container_memory_cache` y
+`container_memory_working_set_bytes` en `memory_extra.json` mediante
+`scripts/extraer_memoria.py`. RSS en cAdvisor representa principalmente memoria
+anónima; el uso total incluye también caché y memoria compartida, por lo que
+no son equivalentes y deben explicarse por separado en M3. Véanse el
+[modelo de memoria de cAdvisor](https://github.com/google/cadvisor/blob/master/lib/model/container.go)
+y la [documentación de cgroups v2](https://docs.kernel.org/admin-guide/cgroup-v2.html).
+La extracción adicional se verificó con la prueba corta posterior al reinicio;
+la matriz la exige para cada corrida antes de consolidar su CSV.
 
 MongoDB activa profiler nivel 2 temporalmente y etiqueta cada consulta para
 detectar `usedDisk`. Si faltan registros del profiler, el spill queda vacío y

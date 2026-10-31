@@ -1,0 +1,21 @@
+{
+  "scope": "Diagnóstico del segundo piloto; no usar como resultado válido de rendimiento",
+  "run_id": "piloto_mongo_q1_02",
+  "engine": "mongodb",
+  "profile": "PROFILE_A_BASELINE",
+  "query_id": "Q1",
+  "concurrency": 1,
+  "durations_seconds": {"warmup": 60, "measurement": 300, "cooldown": 60},
+  "successful_completions_in_window": 225,
+  "latency_samples_fully_inside_window": 224,
+  "telemetry": {"samples_per_series": 277, "coverage": 0.9233333333333333, "max_gap_seconds": 3.73},
+  "clock_preflight_rate_difference": 0.000009646734329682438,
+  "clock_postflight_rate_difference": 0.08333627791086085,
+  "profiler": {"level_after_run": 0, "overlapping_operations": 226, "missing_profile_markers": 0, "spilled_markers": 0},
+  "outcome": "no_aprobado",
+  "reason": "El reloj de WSL volvió a presentar deriva después del reinicio y hubo huecos de telemetría.",
+  "host_clock": {"windows_source": "Local CMOS Clock", "windows_synchronized": false, "reference_offset_seconds_approx": 4.29,
+                 "reference_servers": ["time.windows.com", "time.google.com"],
+                 "note": "El desfase y la falta de sincronización son observaciones; no se ha demostrado que sean la causa única."},
+  "raw_evidence": "Otros/benchmarks/piloto_mongo_q1_02/ y Otros/diagnosticos/reloj_windows_01.json"
+}

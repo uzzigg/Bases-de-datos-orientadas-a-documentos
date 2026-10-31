@@ -15,8 +15,8 @@ métricas en Prometheus. Son pruebas de infraestructura, no resultados Q1/Q2.
 
 Generador implementado y dataset de 500,000 órdenes creado, verificado y cargado
 en ambos motores. Q1 y Q2 se validaron funcionalmente, con planes de ejecución.
-El runner y la automatización están implementados. El primer piloto se completó
-pero no fue aprobado por huecos de telemetría y una anomalía de reloj en WSL.
+El runner y la automatización están implementados. Dos pilotos se completaron
+pero no fueron aprobados por huecos de telemetría y una anomalía de reloj en WSL.
 La matriz permanece bloqueada hasta conseguir un piloto válido y auditado.
 El piloto completo y las 162 corridas siguen pendientes.
 
@@ -41,8 +41,9 @@ Las [consultas y su validación](docs/consultas.md) incluyen Q1/Q2 para ambos
 motores, variantes de memoria, resultados comparados y planes seleccionados.
 
 El [protocolo del runner](docs/medicion.md) explica fases, métricas, profiler,
-evidencia y recuperación. El [diagnóstico del primer piloto](resultados/piloto_01_diagnostico.json)
-describe sus limitaciones; sus cifras no se usan como resultados del benchmark.
+evidencia y recuperación. Los diagnósticos del [primer piloto](resultados/piloto_01_diagnostico.json)
+y [segundo piloto](resultados/piloto_02_diagnostico.json) describen sus limitaciones;
+sus cifras no se usan como resultados del benchmark.
 
 ## Uso de la infraestructura
 

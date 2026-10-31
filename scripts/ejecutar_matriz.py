@@ -93,11 +93,22 @@ def main():
             raise RuntimeError('Existe un runner activo o interrumpido; revise su bloqueo')
         log_path = home / f'matriz_{args.matrix_id}.log'
         with log_path.open('a', encoding='utf-8') as log:
+            def ensure_memory(run_id, folder):
+                evidence = folder / 'memory_extra.json'
+                if not evidence.exists():
+                    command = [sys.executable, str(ROOT / 'scripts/extraer_memoria.py'), run_id]
+                    extracted = subprocess.run(command, cwd=ROOT, stdout=log, stderr=subprocess.STDOUT)
+                    if extracted.returncode:
+                        raise RuntimeError(f'Falta evidencia adicional de memoria: {run_id}')
+                data = json.loads(evidence.read_text(encoding='utf-8'))
+                if data.get('run_id') != run_id or not data.get('passed'):
+                    raise RuntimeError(f'Evidencia adicional de memoria inválida: {run_id}')
             for number, case in enumerate(runs, 1):
                 run_id = f"m_{args.matrix_id}_{case['engine']}_{case['profile']}_{case['query']}_{case['concurrency']}_{case['run_number']}"
                 output = home / run_id
                 if output.exists():
                     data = completed(case, output)
+                    ensure_memory(run_id, output)
                     print(f'[{number}/162] ya completado: {run_id}', flush=True)
                     continue
                 print(f'[{number}/162] {run_id}', flush=True)
@@ -112,6 +123,7 @@ def main():
                     if not output.exists():
                         raise RuntimeError(f'La ejecución {run_id} no produjo evidencia (código {result.returncode})')
                     completed(case, output)
+                ensure_memory(run_id, output)
         # La consolidación solo incluye filas completas; no altera evidencia.
         output = ROOT / 'resultados' / f'matriz_{args.matrix_id}.csv'
         if output.exists():
@@ -123,6 +135,7 @@ def main():
             for case in runs:
                 run_id = f"m_{args.matrix_id}_{case['engine']}_{case['profile']}_{case['query']}_{case['concurrency']}_{case['run_number']}"
                 detail = completed(case, home / run_id)
+                ensure_memory(run_id, home / run_id)
                 writer.writerow(detail['row'])
             f.flush()
             os.fsync(f.fileno())
