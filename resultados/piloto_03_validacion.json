@@ -1,0 +1,72 @@
+{
+  "scope": "Piloto completo aprobado; no sustituye las repeticiones de la matriz",
+  "run_id": "piloto_mongo_q1_03",
+  "row": {
+    "timestamp_epoch": 1793458853.928,
+    "engine": "mongodb",
+    "profile": "PROFILE_A_BASELINE",
+    "query_id": "Q1",
+    "concurrency": 1,
+    "run_number": 1,
+    "throughput_qps": 0.69,
+    "latency_p50_ms": 1370.539,
+    "latency_p95_ms": 1574.269,
+    "latency_p99_ms": 4349.221,
+    "cpu_throttled_seconds": 0.0,
+    "max_rss_mb": 725.391,
+    "disk_spill": "false",
+    "status": "ok"
+  },
+  "phase_seconds": {
+    "warmup": 60,
+    "measurement": 300,
+    "cooldown": 60
+  },
+  "clock_preflight": {
+    "monotonic": 5.000091515000001,
+    "raw": 5.000282712000001,
+    "host_elapsed_including_wsl_startup": 5.089471299999786,
+    "rate_difference": 3.823723797469203e-05,
+    "host_raw_difference_seconds": 0.0891885879997858,
+    "passed": true
+  },
+  "clock_postflight": {
+    "monotonic": 5.000276567000014,
+    "raw": 4.999920585999973,
+    "host_elapsed_including_wsl_startup": 5.113085200000114,
+    "rate_difference": 7.119733082117108e-05,
+    "host_raw_difference_seconds": 0.11316461400014077,
+    "passed": true
+  },
+  "telemetry": {
+    "rss": [
+      {
+        "samples": 301,
+        "coverage": 1,
+        "max_gap_seconds": 1.003999948501587,
+        "passed": true
+      }
+    ],
+    "cpu": [
+      {
+        "samples": 301,
+        "coverage": 1,
+        "max_gap_seconds": 1.003999948501587,
+        "passed": true
+      }
+    ],
+    "up": [
+      {
+        "samples": 301,
+        "coverage": 1,
+        "max_gap_seconds": 1.003999948501587,
+        "passed": true
+      }
+    ]
+  },
+  "profile_level_after_run": 0,
+  "spill_consistent": true,
+  "approved": true,
+  "clock_rate_limit_exclusive": 0.025,
+  "note": "Sincronizador Ubuntu aislado temporalmente durante el piloto; límite de ritmo ampliado por decisión del estudiante."
+}
