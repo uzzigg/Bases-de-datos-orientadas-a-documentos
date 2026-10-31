@@ -1,0 +1,23 @@
+# Material local y diagnosticos fuera de la entrega
+/Otros/
+
+# Credenciales y configuracion privada
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Entornos y caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Datos masivos y telemetria cruda deben guardarse en Otros/.
+# Los CSV finales y las evidencias seleccionadas si se versionan.

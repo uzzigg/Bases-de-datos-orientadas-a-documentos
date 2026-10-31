@@ -1,0 +1,41 @@
+{
+  "protocol_version": "0.1",
+  "timezone": "America/Mexico_City",
+  "dataset": {"orders": 500000, "seed": 243733, "mean_items": 3, "timestamp_format": "YYYY-MM-DDTHH:mm:ssZ", "sha256_required": true},
+  "profiles": [
+    {"id": "PROFILE_A_BASELINE", "cpus": 4, "memory_mib": 4096, "swap_bytes": 0},
+    {"id": "PROFILE_B_MEDIUM", "cpus": 2, "memory_mib": 2048, "swap_bytes": 0},
+    {"id": "PROFILE_C_SEVERE", "cpus": 1, "memory_mib": 1024, "swap_bytes": 0}
+  ],
+  "engines": {
+    "mongodb": {
+      "image": "mongo:9.0.4-resolute@sha256:714cc3db1e396e5a464b8443ccde50e53283368809401f53f1997b684ddb5be0",
+      "q1": [{"query_id": "Q1", "allowDiskUse": true}],
+      "q2": [{"query_id": "Q2_NO_DISK", "allowDiskUse": false}, {"query_id": "Q2_DISK", "allowDiskUse": true}]
+    },
+    "postgresql": {
+      "image": "postgres:18.6-trixie@sha256:979bccfde35445db618c65107d27d08c6c21339d8dc3ad4c830c6633947be0e4",
+      "q1": [{"query_id": "Q1", "work_mem": "4MB"}],
+      "q2": [{"query_id": "Q2_4MB", "work_mem": "4MB"}, {"query_id": "Q2_64MB", "work_mem": "64MB"}]
+    }
+  },
+  "monitoring_versions": {"cadvisor": "v0.60.6", "node_exporter": "v1.12.1", "prometheus": "v3.15.1"},
+  "concurrency": [1, 10, 50],
+  "repetitions": 3,
+  "warmup_seconds": 60,
+  "measurement_seconds": 300,
+  "cooldown_seconds": 60,
+  "scrape_interval_seconds": 1,
+  "base_cells": 36,
+  "expanded_cells": 54,
+  "expanded_runs": 162,
+  "minimum_wall_time_hours": 18.9,
+  "csv_columns": ["timestamp_epoch", "engine", "profile", "query_id", "concurrency", "run_number", "throughput_qps", "latency_p50_ms", "latency_p95_ms", "latency_p99_ms", "cpu_throttled_seconds", "max_rss_mb", "disk_spill", "status"],
+  "notes": [
+    "Q2 variants expand the manual's base matrix; query_id mapping is a documented project decision, not an additional teacher instruction.",
+    "Q1 memory settings are explicit project defaults because the manual only specifies memory variants for Q2.",
+    "Metric availability in cAdvisor and the complete measurement pipeline must pass the phase-1 pilot.",
+    "Memory limits in Docker m suffix are binary; max_rss_mb will be documented as MiB (bytes / 1048576).",
+    "This root file is the canonical protocol. Any copy under Otros is a historical local diagnostic."
+  ]
+}
