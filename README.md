@@ -13,8 +13,8 @@ Fase 1: infraestructura implementada y verificada con ambos motores en A/B/C.
 Las seis pruebas comprobaron límites, conexión, persistencia tras reinicio y
 métricas en Prometheus. Son pruebas de infraestructura, no resultados Q1/Q2.
 
-Generador implementado y dataset de 500,000 órdenes creado y verificado.
-Siguiente trabajo: carga en ambos motores, consultas equivalentes y runner.
+Generador implementado y dataset de 500,000 órdenes creado, verificado y cargado
+en ambos motores. Siguiente trabajo: consultas equivalentes y runner.
 El piloto completo y las 162 corridas siguen pendientes.
 
 Para generar el dataset y verificarlo desde la raíz del proyecto:
@@ -28,6 +28,11 @@ Los archivos se crean en `Otros/dataset/` y el generador no sobrescribe archivos
 existentes. El manifiesto de referencia está en `resultados/dataset_manifest.json`.
 Precios y totales son enteros, con impuestos y descuentos cero: son decisiones
 del generador sintético y deben considerarse al interpretar las conclusiones.
+
+Los importadores, requisitos y validaciones de carga se describen en
+[carga de datos](docs/carga_datos.md). Comprueban el hash del archivo maestro
+y se detienen si el destino `orders` ya existe. La comparación de carga usa
+conteos y diez documentos completos por motor; no es exhaustiva.
 
 ## Uso de la infraestructura
 

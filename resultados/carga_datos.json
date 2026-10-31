@@ -1,0 +1,20 @@
+{
+  "scope": "Carga y comprobaciones de integridad; no es medicion de benchmark",
+  "source_sha256": "c687f77ad6bd8b060943fe88810501630f0ab81a2c60d55c8e2315e98dc01a15",
+  "orders_per_engine": 500000,
+  "q2_eligible_per_engine": 199729,
+  "full_document_samples_checked_per_engine": 10,
+  "mongo_indexes": [
+    "_id_",
+    "order_id_1",
+    "timestamp_1"
+  ],
+  "postgres_indexes": [
+    "orders_pkey",
+    "orders_timestamp_idx"
+  ],
+  "limitations": [
+    "La comparación de documentos se basa en diez muestras y conteos, no en una comparación exhaustiva de cada documento.",
+    "El índice PostgreSQL es B-Tree sobre texto ISO-8601; la consulta del manual convierte a timestamptz y el uso del índice requiere EXPLAIN."
+  ]
+}
