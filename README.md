@@ -5,6 +5,8 @@ agregaciones sobre 500,000 cosechas sintéticas, con límites de CPU y memoria e
 
 El caso vigente es **producción agrícola**. Véase [caso y consultas agrícolas](agricola/README.md), el [borrador del reporte agrícola](docs/reporte_agricola.md) y el [piloto agrícola auditado](resultados/piloto_agricola_01.json). La matriz agrícola está en curso. El material del caso de órdenes que aparece más abajo es antecedente histórico y sus mediciones no son resultados agrícolas.
 
+Las medidas para preservar evidencia, recuperar fallos transitorios y generar respaldos parciales se describen en [prevención y recuperación](docs/recuperacion.md).
+
 ## Antecedentes: caso de órdenes
 
 Fase 0: verificaciones previas realizadas. Docker Desktop, Ubuntu en WSL2,
