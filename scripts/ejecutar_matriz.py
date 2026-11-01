@@ -9,6 +9,7 @@ import random
 import re
 import subprocess
 import sys
+import time
 import uuid
 from pathlib import Path
 
@@ -113,9 +114,15 @@ def main():
                     continue
                 print(f'[{number}/162] {run_id}', flush=True)
                 stack = ['powershell.exe', '-NoProfile', '-File', str(ROOT / 'scripts/stack.ps1'), '-Action', 'Up', '-Engine', case['engine'], '-Profile', case['profile']]
-                started = subprocess.run(stack, cwd=ROOT, stdout=log, stderr=subprocess.STDOUT)
-                if started.returncode:
-                    raise RuntimeError(f'No arrancó el perfil {run_id}; revisar {log_path}')
+                for attempt in range(1, 4):
+                    started = subprocess.run(stack, cwd=ROOT, stdout=log, stderr=subprocess.STDOUT)
+                    if started.returncode == 0:
+                        break
+                    if attempt < 3:
+                        print(f'Espera de recuperación del entorno ({attempt}/3): {run_id}', flush=True)
+                        time.sleep(45)
+                else:
+                    raise RuntimeError(f'No arrancó el perfil {run_id} tras tres intentos; revisar {log_path}')
                 cmd = [sys.executable, str(ROOT / 'benchmark_runner.py'), '--engine', case['engine'], '--profile', case['profile'], '--query', case['query'], '--concurrency', str(case['concurrency']), '--run-number', str(case['run_number']), '--run-id', run_id]
                 child_env = dict(os.environ, BENCH_MATRIX_TOKEN=token)
                 result = subprocess.run(cmd, cwd=ROOT, stdout=log, stderr=subprocess.STDOUT, env=child_env)
