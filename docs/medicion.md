@@ -72,10 +72,10 @@ Los contadores cgroup se leen al inicio y final; estos comandos `docker exec`
 añaden una pequeña carga al contenedor. RSS proviene de cAdvisor y se expresa en
 MiB. Las muestras reales de Prometheus se consultan como vector de rango, sin
 interpolar huecos: la corrida se marca error si RSS, CPU o los recolectores
-tienen menos del 90% de cobertura, hay un hueco interior superior a 4 s, faltan
+tienen menos del 90% de cobertura, hay un hueco interior superior a 6 s, faltan
 muestras en los extremos o cAdvisor/Node Exporter aparecen inactivos.
-El límite interior se amplió de 2.5 a 4 s durante la matriz por decisión del
-estudiante; los límites en los extremos siguen en 2.5 s. La cobertura mínima
+El límite interior se amplió de 2.5 a 4 y después a 6 s durante la matriz por
+decisión del estudiante; los límites en los extremos siguen en 2.5 s. La cobertura mínima
 sigue en 90%. Un hueco mayor puede ocultar picos breves de uso de recursos.
 Se conserva el vector completo para auditoría; revisar también CPU, fronteras
 y otros recolectores en el piloto y al aceptar cada ventana.
