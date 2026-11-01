@@ -2,6 +2,8 @@
 
 **Caso vigente: agricultura.** El runner y la auditoría usan `agricola/` y la colección o tabla `cosechas`. Los diagnósticos y ejemplos de órdenes que se describen a continuación son antecedentes; no mezclar sus resultados con la matriz agrícola. El piloto agrícola está en `resultados/piloto_agricola_01.json`.
 
+Durante la matriz se amplió `system.profile` de MongoDB de 1 MiB a 256 MiB después de que una corrida perdiera registros. Se respaldaron los registros disponibles antes del cambio; la corrida afectada conserva `status=error` y `disk_spill` vacío (desconocido), sin tratarlo como falso. El cambio de tamaño ocurrió después de esa corrida y se debe considerar al comparar etapas.
+
 ## Requisitos y seguridad
 
 El dataset debe estar cargado en ambos motores y el stack Docker debe funcionar.

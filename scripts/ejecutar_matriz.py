@@ -79,7 +79,7 @@ def main():
         expected = ('mongodb' if case['engine'] == 'mongo' else 'postgresql', {'A': 'PROFILE_A_BASELINE', 'B': 'PROFILE_B_MEDIUM', 'C': 'PROFILE_C_SEVERE'}[case['profile']], case['query'], case['concurrency'], case['run_number'])
         if (row['engine'], row['profile'], row['query_id'], row['concurrency'], row['run_number']) != expected or rows[0]['status'] != row['status']:
             raise RuntimeError(f'Identidad o estado incoherente: {output.name}')
-        if not data.get('full_protocol') or data.get('telemetry_error') or row['disk_spill'] == '' or row['status'] not in ('ok', 'spill', 'oom', 'error'):
+        if not data.get('full_protocol') or data.get('telemetry_error') or (row['disk_spill'] == '' and row['status'] != 'error') or row['status'] not in ('ok', 'spill', 'oom', 'error'):
             raise RuntimeError(f'Intento {output.name} requiere revisión: {row["status"]}')
         return data
     lock = home / '.matriz.lock'
