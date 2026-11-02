@@ -1,6 +1,13 @@
 # Rendimiento de bases de datos documentales: caso de producción agrícola
 
-**Reporte de trabajo.** Actividad: Bases de datos orientadas a documentos. Caso: cosechas agrícolas. Alumno, docente y fecha: completar y verificar antes de entregar.
+**Datos para la portada**
+
+- Universidad Politécnica de Chiapas
+- Ingeniería en Tecnologías de la Información e Innovación Digital
+- Actividad: Bases de datos orientadas a documentos
+- Materia: Base de datos en la nube
+- Docente: Horacio Irán Solís Cisneros
+- Alumno: Uzzi Yazziel Gonzaga Gómez. Matrícula: 243734. Fecha: 01 de noviembre de 2026.
 
 ## Resumen
 
@@ -18,11 +25,11 @@ Los motores se ejecutaron por separado, con datos en volúmenes de Docker. Los l
 
 Se generaron 500.000 cosechas sintéticas con 1.499.983 lotes, derivados de forma determinista del conjunto inicial. Cada cosecha contiene productor, ubicación y una lista de lotes con cultivo, cajas y kilogramos por caja. El total es la suma de cajas por kilogramos por caja. El umbral de 50 kg por caja es una condición artificial del experimento, no una descripción de prácticas agrícolas reales.
 
-El archivo agrícola tiene SHA-256 `2f73f8a70f7d59b4ef0e6f932a725000c7b7be2e0368ec774c6358e03d2b9d1a`. Se verificaron 500.000 registros en cada motor y 199.729 cosechas que cumplen el filtro temporal y de estado. Esta comprobación no prueba por sí sola la igualdad exhaustiva de todos los documentos.
+Para identificar el archivo de datos se calculó una huella digital (SHA-256). Esta cadena permite comprobar si una copia conserva exactamente el mismo contenido que el archivo registrado; su valor completo se incluye en la sección de evidencia. Se verificaron 500.000 registros en cada motor y 199.729 cosechas que cumplen el filtro temporal y de estado. Esta comprobación no prueba por sí sola la igualdad exhaustiva de todos los documentos.
 
 Q1 desanida los lotes, selecciona aquellos con más de 50 kg por caja y agrupa producción total y promedio por país y cultivo. Q2 filtra cosechas finalizadas desde el 1 de enero de 2026 y obtiene las 1.000 con mayor peso. Se evaluaron las opciones de disco de MongoDB y `work_mem` de 4 MB y 64 MB en PostgreSQL para Q2. El conjunto expandido tiene 54 escenarios y tres repeticiones por escenario: 162 registros. La ampliación de variantes frente a las 36 celdas base del manual es una decisión del proyecto.
 
-Cada repetición programó 60 segundos de calentamiento, 300 de medición y 60 de enfriamiento, con 1, 10 o 50 clientes. Las consultas completadas se contabilizaron como QPS. Los percentiles se calcularon con operaciones que comenzaron y terminaron dentro de la ventana; 2.991 operaciones cruzaron el cierre en el conjunto completo y no entran en esos percentiles. Esta regla puede dejar fuera consultas largas, por lo que no se deben comparar los P99 sin considerar esa limitación.
+Cada repetición programó 60 segundos de calentamiento, 300 de medición y 60 de enfriamiento, con 1, 10 o 50 clientes. La cantidad de consultas completadas por segundo se expresa como rendimiento (QPS). Para describir los tiempos de respuesta se usan medidas que indican qué proporción de consultas terminó dentro de cierto tiempo (percentiles): el P95 deja al 95 % de las consultas medidas en ese tiempo o menos, y el P99 deja al 99 %. Los percentiles se calcularon con operaciones que comenzaron y terminaron dentro de la ventana; 2.991 operaciones cruzaron el cierre en el conjunto completo y no entran en esos percentiles. Esta regla puede dejar fuera consultas largas, por lo que no se deben comparar los P99 sin considerar esa limitación.
 
 La validación funcional detallada encontró 20 grupos Q1 con sumas y conteos exactos. La mayor diferencia de promedio fue 5,23 × 10⁻¹⁴ y quedó dentro de la tolerancia documentada. Las cuatro variantes Q2 produjeron los mismos 1.000 pesos en orden. El corte fue 2.719 kg y hay 998 cosechas por encima; un identificador difirió entre motores en el empate del corte. Evidencia: `resultados/validacion_agricola_detallada.json`. La validación de consultas no equivale a una comparación exhaustiva de todas las filas almacenadas.
 
@@ -30,7 +37,7 @@ El umbral de diferencia de ritmo del reloj fue menor a 2,5 %. El límite de huec
 
 ## 3. Resultados consolidados
 
-Las medianas siguientes se calculan sobre las repeticiones con estado `ok` o `spill`; los estados `error` y `oom` se mantienen en el CSV original. El resumen completo, con número de repeticiones, mínimo y máximo por escenario, está en `resultados/resumen_agricola.csv`. Cinco escenarios tienen menos de tres repeticiones utilizables. El QPS es consultas por segundo; las latencias están en milisegundos.
+El valor central de las repeticiones ordenadas (mediana) resume cada escenario. Las medianas siguientes se calculan sobre las repeticiones con estado `ok` o `spill`; los estados `error` y `oom` se mantienen en el CSV original. El resumen completo, con número de repeticiones, mínimo y máximo por escenario, está en `resultados/resumen_agricola.csv`. Cinco escenarios tienen menos de tres repeticiones utilizables. El QPS es consultas por segundo; las latencias están en milisegundos.
 
 | Perfil A, 1 cliente | Motor | Mediana QPS | Mediana P95 (ms) | Mediana P99 (ms) |
 |---|---|---:|---:|---:|
@@ -49,11 +56,11 @@ En 26 corridas con estado `ok` o `spill` hubo menos de 100 latencias completas e
 
 ## 4. Gráficas
 
-Las gráficas se generaron con `scripts/graficar_agricola.py` a partir de los resultados y métricas guardadas:
+Las gráficas se generaron con `scripts/graficar_agricola.py` a partir de los resultados y métricas guardadas. Para leerlas, una cifra de QPS mayor indica más consultas completadas por segundo; un tiempo de respuesta menor indica que las consultas terminan más rápido. Cada gráfica ayuda a observar un aspecto distinto:
 
-1. `resultados/graficas_agricola/p99_concurrencia.png`: mediana de P99 por escenario. La escala vertical es logarítmica y los escenarios sin repeticiones utilizables no tienen punto. Q2 bajo representa sin disco en MongoDB y 4 MB en PostgreSQL; Q2 alto representa con disco y 64 MB, respectivamente.
-2. `resultados/graficas_agricola/throttling_qps.png`: relación descriptiva entre medianas de QPS y segundos acumulados de restricción de CPU. No demuestra causalidad.
-3. `resultados/graficas_agricola/rss_ejemplo.png`: serie RSS de Q1, perfil A, un cliente, primera repetición para cada motor. Son ejecuciones separadas, alineadas por tiempo relativo; RSS no equivale al uso total de memoria.
+1. `resultados/graficas_agricola/p99_concurrencia.png`: mediana de P99 por escenario. La escala vertical es logarítmica y los escenarios sin repeticiones utilizables no tienen punto. Q2 bajo representa sin disco en MongoDB y 4 MB en PostgreSQL; Q2 alto representa con disco y 64 MB, respectivamente. Permite observar cómo cambia el tiempo de respuesta de las consultas más lentas al aumentar el número de clientes. En una escala logarítmica, distancias iguales representan multiplicaciones, no incrementos iguales.
+2. `resultados/graficas_agricola/throttling_qps.png`: relaciona las consultas completadas por segundo con el tiempo acumulado en que se limitó el uso del procesador (throttling). Ayuda a observar si ambos valores aparecen juntos en los escenarios medidos; por sí sola no demuestra que uno cause el otro.
+3. `resultados/graficas_agricola/rss_ejemplo.png`: muestra cómo cambia con el tiempo una medida de la memoria residente (RSS) en Q1, perfil A y un cliente, durante la primera repetición de cada motor. Las ejecuciones fueron separadas y se alinearon por tiempo relativo. El RSS mostrado no equivale al uso total de memoria.
 
 ## 5. Planes de ejecución
 
@@ -63,7 +70,7 @@ En PostgreSQL, el plan Q1 con 4 MB mostró lectura secuencial, expansión de lot
 
 ## 6. Interpretación y limitaciones
 
-**M1.** En los ejemplos de Q1, el P99 aumenta al crecer la concurrencia. En MongoDB A pasó de una mediana de 1.252 ms con un cliente a 36.106 ms con 50; en PostgreSQL A pasó de 1.853 ms a 166.958 ms. Son medianas de percentiles por corrida y deben leerse con sus cantidades de muestras, errores y operaciones que quedaron fuera de ventana.
+**M1.** En los ejemplos de Q1, el P99 aumenta al crecer la concurrencia. En MongoDB A pasó de una mediana de 1.252 ms con un cliente a 36.106 ms con 50; en PostgreSQL A pasó de 1.853 ms a 166.958 ms. Primero se calculó el P99 de cada repetición y después se tomó el valor central de esos resultados (mediana de percentiles por corrida); no es el P99 de todas las consultas juntas. Estas cifras deben leerse con sus cantidades de muestras, errores y operaciones que quedaron fuera de ventana.
 
 **M2.** Bajo estas condiciones, PostgreSQL registró spill en las repeticiones utilizables de Q1; el plan puntual también mostró ordenamiento externo. El profiler de MongoDB no detectó spill en las corridas para las que pudo comprobarse, pero una corrida tiene spill desconocido. El OOM observado demuestra un fallo por memoria en una corrida concreta; no establece un umbral universal de producción.
 
@@ -81,7 +88,7 @@ Para ordenar o agrupar datos, revisar planes e índices y controlar memoria por 
 
 ## Evidencia y reproducibilidad
 
-- Datos sintéticos y generación: `agricola/generar_dataset.py`; manifiesto local `Otros/dataset_agricola/manifiesto.json`.
+- Datos sintéticos y generación: `agricola/generar_dataset.py`; manifiesto local `Otros/dataset_agricola/manifiesto.json`. Huella SHA-256 del archivo agrícola: `2f73f8a70f7d59b4ef0e6f932a725000c7b7be2e0368ec774c6358e03d2b9d1a`.
 - Consultas y validación: `agricola/` y `resultados/validacion_agricola_detallada.json`.
 - CSV de las 162 corridas: `resultados/matriz_agricola.csv`; SHA-256 `68842a8d9b398386549cf26a6b89b6e84352fc1e995858ee45b28f853ed25d33`.
 - Análisis reproducible: `scripts/analizar_resultados.py`; resultados `resultados/analisis_agricola.json` y `resultados/resumen_agricola.csv`.
