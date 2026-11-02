@@ -1,0 +1,28 @@
+{
+  "q1_grupos": 20,
+  "q1_sumas_y_conteos_exactos": true,
+  "q1_tolerancia": "max(0.000001, abs(promedio_postgresql)*0.000000000001)",
+  "q1_diferencia_maxima": "5.23E-14",
+  "q2_valores_y_orden_exactos": true,
+  "q2_corte_kg": "2719",
+  "q2_filas_sobre_corte": 998,
+  "q2_variantes": {
+    "mongo_q2_no_disk": {
+      "filas": 1000,
+      "ids_comunes_con_referencia": 1000
+    },
+    "mongo_q2_disk": {
+      "filas": 1000,
+      "ids_comunes_con_referencia": 1000
+    },
+    "postgres_q2_4MB": {
+      "filas": 1000,
+      "ids_comunes_con_referencia": 999
+    },
+    "postgres_q2_64MB": {
+      "filas": 1000,
+      "ids_comunes_con_referencia": 999
+    }
+  },
+  "nota": "Empates en el corte pueden cambiar IDs; no se validó exhaustivamente el contenido de cada documento en las bases."
+}

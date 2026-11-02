@@ -1,0 +1,246 @@
+{
+  "explainVersion": "1",
+  "queryPlanner": {
+    "namespace": "document_benchmark.cosechas",
+    "parsedQuery": {
+      "$and": [
+        {
+          "resultado.estado": {
+            "$eq": "finalizada"
+          }
+        },
+        {
+          "fecha": {
+            "$gte": "2026-01-01T00:00:00Z"
+          }
+        }
+      ]
+    },
+    "indexFilterSet": false,
+    "queryHash": "B7C359A0",
+    "planCacheShapeHash": "B7C359A0",
+    "planCacheKey": "BD1378B9",
+    "optimizationTimeMillis": 0,
+    "optimizationTimeMicros": 135,
+    "optimizedPipeline": true,
+    "maxIndexedOrSolutionsReached": false,
+    "maxIndexedAndSolutionsReached": false,
+    "maxScansToExplodeReached": false,
+    "prunedSimilarIndexes": false,
+    "winningPlan": {
+      "isCached": false,
+      "stage": "PROJECTION_DEFAULT",
+      "transformBy": {
+        "_id": true,
+        "cosecha_id": true,
+        "productor": {
+          "id": true
+        },
+        "resultado": {
+          "total_kg": true
+        }
+      },
+      "inputStage": {
+        "stage": "SORT",
+        "sortPattern": {
+          "resultado.total_kg": -1
+        },
+        "memLimit": 104857600,
+        "limitAmount": 1000,
+        "type": "simple",
+        "inputStage": {
+          "stage": "FETCH",
+          "filter": {
+            "resultado.estado": {
+              "$eq": "finalizada"
+            }
+          },
+          "nss": "document_benchmark.cosechas",
+          "inputStage": {
+            "stage": "IXSCAN",
+            "nss": "document_benchmark.cosechas",
+            "keyPattern": {
+              "fecha": 1
+            },
+            "indexName": "fecha_1",
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "fecha": []
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "fecha": [
+                "[\"2026-01-01T00:00:00Z\", {})"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "rejectedPlans": []
+  },
+  "executionStats": {
+    "executionSuccess": true,
+    "nReturned": 1000,
+    "executionTimeMillis": 421,
+    "executionTimeMicros": 421313,
+    "totalKeysExamined": 249767,
+    "totalDocsExamined": 249767,
+    "executionStages": {
+      "isCached": false,
+      "stage": "PROJECTION_DEFAULT",
+      "nReturned": 1000,
+      "executionTimeMillisEstimate": 415,
+      "works": 250769,
+      "advanced": 1000,
+      "needTime": 249768,
+      "needYield": 0,
+      "saveState": 21,
+      "restoreState": 21,
+      "isEOF": 1,
+      "transformBy": {
+        "_id": true,
+        "cosecha_id": true,
+        "productor": {
+          "id": true
+        },
+        "resultado": {
+          "total_kg": true
+        }
+      },
+      "peakTrackedMemBytes": 0,
+      "inputStage": {
+        "stage": "SORT",
+        "nReturned": 1000,
+        "executionTimeMillisEstimate": 410,
+        "works": 250769,
+        "advanced": 1000,
+        "needTime": 249768,
+        "needYield": 0,
+        "saveState": 21,
+        "restoreState": 21,
+        "isEOF": 1,
+        "sortPattern": {
+          "resultado.total_kg": -1
+        },
+        "memLimit": 104857600,
+        "limitAmount": 1000,
+        "type": "simple",
+        "totalDataSizeSorted": 803937,
+        "usedDisk": false,
+        "spills": 0,
+        "spilledRecords": 0,
+        "spilledBytes": 0,
+        "spilledDataStorageSize": 0,
+        "peakTrackedMemBytes": 804194,
+        "inputStage": {
+          "stage": "FETCH",
+          "filter": {
+            "resultado.estado": {
+              "$eq": "finalizada"
+            }
+          },
+          "nReturned": 199729,
+          "executionTimeMillisEstimate": 409,
+          "works": 249768,
+          "advanced": 199729,
+          "needTime": 50038,
+          "needYield": 0,
+          "saveState": 21,
+          "restoreState": 21,
+          "isEOF": 1,
+          "nss": "document_benchmark.cosechas",
+          "docsExamined": 249767,
+          "alreadyHasObj": 0,
+          "inputStage": {
+            "stage": "IXSCAN",
+            "nReturned": 249767,
+            "executionTimeMillisEstimate": 54,
+            "works": 249768,
+            "advanced": 249767,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 21,
+            "restoreState": 21,
+            "isEOF": 1,
+            "nss": "document_benchmark.cosechas",
+            "keyPattern": {
+              "fecha": 1
+            },
+            "indexName": "fecha_1",
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "fecha": []
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "fecha": [
+                "[\"2026-01-01T00:00:00Z\", {})"
+              ]
+            },
+            "keysExamined": 249767,
+            "seeks": 1,
+            "dupsTested": 0,
+            "dupsDropped": 0,
+            "peakTrackedMemBytes": 0
+          }
+        }
+      }
+    }
+  },
+  "queryShapeHash": "AE8E79F5E849718B181ED69F583636EDD1E282972E13B05C536955A98CE39C69",
+  "peakTrackedMemBytes": 804194,
+  "command": {
+    "aggregate": "cosechas",
+    "pipeline": [
+      {
+        "$match": {
+          "resultado.estado": "finalizada",
+          "fecha": {
+            "$gte": "2026-01-01T00:00:00Z"
+          }
+        }
+      },
+      {
+        "$sort": {
+          "resultado.total_kg": -1
+        }
+      },
+      {
+        "$limit": 1000
+      },
+      {
+        "$project": {
+          "cosecha_id": 1,
+          "productor.id": 1,
+          "resultado.total_kg": 1
+        }
+      }
+    ],
+    "cursor": {},
+    "allowDiskUse": false,
+    "$db": "document_benchmark"
+  },
+  "serverInfo": {
+    "host": "6e122550632c",
+    "port": 27017,
+    "version": "9.0.4",
+    "gitVersion": "64ade602b836c9adeffba7fa038c887ffab56196"
+  },
+  "serverParameters": {
+    "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+    "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+    "internalQueryProhibitBlockingMergeOnMongoS": 0,
+    "internalQueryFrameworkControl": "trySbeRestricted",
+    "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "ok": 1.0
+}

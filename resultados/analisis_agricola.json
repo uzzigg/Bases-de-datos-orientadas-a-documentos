@@ -1,0 +1,4178 @@
+{
+  "scope": "Análisis descriptivo agrícola; solo estados ok/spill en medianas; errores conservados",
+  "source_sha256": "68842a8d9b398386549cf26a6b89b6e84352fc1e995858ee45b28f853ed25d33",
+  "rows": 162,
+  "cells": 54,
+  "states": {
+    "ok": 128,
+    "spill": 21,
+    "error": 12,
+    "oom": 1
+  },
+  "cells_under_three_valid": 5,
+  "anomalies": [],
+  "runs": [
+    {
+      "run_id": "m_agricola_postgres_A_Q2_4MB_50_1",
+      "status": "ok",
+      "latency_samples": 1995,
+      "successes": 2045,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1199.532281
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q2_4MB_50_2",
+      "status": "ok",
+      "latency_samples": 2023,
+      "successes": 2073,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1199.178794
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q2_4MB_50_3",
+      "status": "ok",
+      "latency_samples": 2020,
+      "successes": 2070,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1199.526655
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q2_64MB_50_1",
+      "status": "ok",
+      "latency_samples": 2025,
+      "successes": 2075,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1199.348997
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q2_64MB_50_2",
+      "status": "ok",
+      "latency_samples": 2018,
+      "successes": 2068,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1200.868559
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q2_64MB_50_3",
+      "status": "ok",
+      "latency_samples": 2013,
+      "successes": 2063,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1200.149032
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q1_10_1",
+      "status": "spill",
+      "latency_samples": 130,
+      "successes": 140,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 437.840194
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q1_10_2",
+      "status": "spill",
+      "latency_samples": 133,
+      "successes": 143,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 420.593859
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q1_10_3",
+      "status": "spill",
+      "latency_samples": 121,
+      "successes": 131,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 378.402712
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q2_64MB_10_1",
+      "status": "ok",
+      "latency_samples": 2149,
+      "successes": 2159,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1198.895547
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q2_64MB_10_2",
+      "status": "ok",
+      "latency_samples": 2162,
+      "successes": 2172,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1199.326444
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q2_64MB_10_3",
+      "status": "ok",
+      "latency_samples": 2159,
+      "successes": 2169,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1199.185265
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q2_4MB_1_1",
+      "status": "ok",
+      "latency_samples": 2969,
+      "successes": 2970,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1056.14263
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q2_4MB_1_2",
+      "status": "ok",
+      "latency_samples": 2937,
+      "successes": 2938,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1047.697054
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q2_4MB_1_3",
+      "status": "ok",
+      "latency_samples": 2960,
+      "successes": 2961,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1044.329304
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q1_50_1",
+      "status": "spill",
+      "latency_samples": 4,
+      "successes": 54,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 299.617609
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q1_50_2",
+      "status": "spill",
+      "latency_samples": 16,
+      "successes": 66,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 338.574215
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q1_50_3",
+      "status": "spill",
+      "latency_samples": 4,
+      "successes": 54,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 270.385972
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q2_4MB_10_1",
+      "status": "ok",
+      "latency_samples": 2146,
+      "successes": 2156,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1198.980837
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q2_4MB_10_2",
+      "status": "ok",
+      "latency_samples": 2155,
+      "successes": 2165,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1199.174883
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q2_4MB_10_3",
+      "status": "ok",
+      "latency_samples": 2153,
+      "successes": 2163,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1199.314171
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q2_64MB_1_1",
+      "status": "ok",
+      "latency_samples": 2914,
+      "successes": 2915,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1061.894668
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q2_64MB_1_2",
+      "status": "ok",
+      "latency_samples": 2898,
+      "successes": 2899,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1044.026046
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q2_64MB_1_3",
+      "status": "ok",
+      "latency_samples": 2891,
+      "successes": 2892,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1056.838934
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q1_1_1",
+      "status": "spill",
+      "latency_samples": 169,
+      "successes": 170,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 406.444716
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q1_1_2",
+      "status": "spill",
+      "latency_samples": 170,
+      "successes": 171,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 406.488125
+    },
+    {
+      "run_id": "m_agricola_postgres_A_Q1_1_3",
+      "status": "spill",
+      "latency_samples": 170,
+      "successes": 171,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 406.107447
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q2_64MB_50_1",
+      "status": "ok",
+      "latency_samples": 429,
+      "successes": 479,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 300.020202
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q2_64MB_50_2",
+      "status": "ok",
+      "latency_samples": 427,
+      "successes": 477,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 300.044538
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q2_64MB_50_3",
+      "status": "ok",
+      "latency_samples": 423,
+      "successes": 473,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.813368
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q2_4MB_10_1",
+      "status": "ok",
+      "latency_samples": 470,
+      "successes": 480,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.64415
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q2_4MB_10_2",
+      "status": "ok",
+      "latency_samples": 466,
+      "successes": 476,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 298.986269
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q2_4MB_10_3",
+      "status": "ok",
+      "latency_samples": 462,
+      "successes": 472,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.738712
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q1_10_1",
+      "status": "spill",
+      "latency_samples": 49,
+      "successes": 59,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 237.449378
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q1_10_2",
+      "status": "spill",
+      "latency_samples": 53,
+      "successes": 63,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 235.234163
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q1_10_3",
+      "status": "spill",
+      "latency_samples": 47,
+      "successes": 57,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 224.481892
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q2_64MB_1_1",
+      "status": "ok",
+      "latency_samples": 786,
+      "successes": 787,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.428888
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q2_64MB_1_2",
+      "status": "ok",
+      "latency_samples": 781,
+      "successes": 782,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.407594
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q2_64MB_1_3",
+      "status": "ok",
+      "latency_samples": 770,
+      "successes": 771,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.371602
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q2_4MB_50_1",
+      "status": "ok",
+      "latency_samples": 430,
+      "successes": 480,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.496984
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q2_4MB_50_2",
+      "status": "ok",
+      "latency_samples": 418,
+      "successes": 468,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.222127
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q2_4MB_50_3",
+      "status": "ok",
+      "latency_samples": 429,
+      "successes": 479,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.008469
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q2_4MB_1_1",
+      "status": "ok",
+      "latency_samples": 776,
+      "successes": 777,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.473818
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q2_4MB_1_2",
+      "status": "ok",
+      "latency_samples": 771,
+      "successes": 772,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.482406
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q2_4MB_1_3",
+      "status": "ok",
+      "latency_samples": 774,
+      "successes": 775,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.506098
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q1_50_1",
+      "status": "error",
+      "latency_samples": 0,
+      "successes": 0,
+      "crossing": 0,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 0.364369
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q1_50_2",
+      "status": "error",
+      "latency_samples": 0,
+      "successes": 0,
+      "crossing": 0,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 0.380185
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q1_50_3",
+      "status": "error",
+      "latency_samples": 0,
+      "successes": 0,
+      "crossing": 0,
+      "errors": 50,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 0.471252
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q1_1_1",
+      "status": "spill",
+      "latency_samples": 92,
+      "successes": 93,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 230.442641
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q1_1_2",
+      "status": "spill",
+      "latency_samples": 92,
+      "successes": 93,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 230.200033
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q1_1_3",
+      "status": "spill",
+      "latency_samples": 87,
+      "successes": 88,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 218.734642
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q2_64MB_10_1",
+      "status": "ok",
+      "latency_samples": 458,
+      "successes": 468,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.882711
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q2_64MB_10_2",
+      "status": "ok",
+      "latency_samples": 453,
+      "successes": 463,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.738546
+    },
+    {
+      "run_id": "m_agricola_postgres_C_Q2_64MB_10_3",
+      "status": "ok",
+      "latency_samples": 463,
+      "successes": 473,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.778342
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q1_10_1",
+      "status": "ok",
+      "latency_samples": 139,
+      "successes": 149,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.712151
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q1_10_2",
+      "status": "ok",
+      "latency_samples": 137,
+      "successes": 147,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.698282
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q1_10_3",
+      "status": "ok",
+      "latency_samples": 140,
+      "successes": 150,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.737972
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q2_NO_DISK_10_1",
+      "status": "ok",
+      "latency_samples": 91,
+      "successes": 101,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.854719
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q2_NO_DISK_10_2",
+      "status": "ok",
+      "latency_samples": 103,
+      "successes": 113,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.979374
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q2_NO_DISK_10_3",
+      "status": "ok",
+      "latency_samples": 79,
+      "successes": 89,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 300.035699
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q2_DISK_50_1",
+      "status": "error",
+      "latency_samples": 0,
+      "successes": 47,
+      "crossing": 47,
+      "errors": 3,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.924896
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q2_DISK_50_2",
+      "status": "error",
+      "latency_samples": 0,
+      "successes": 50,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 298.941787
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q2_DISK_50_3",
+      "status": "error",
+      "latency_samples": 0,
+      "successes": 50,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 298.882604
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q1_1_1",
+      "status": "ok",
+      "latency_samples": 241,
+      "successes": 242,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.378278
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q1_1_2",
+      "status": "ok",
+      "latency_samples": 240,
+      "successes": 241,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.430446
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q1_1_3",
+      "status": "ok",
+      "latency_samples": 240,
+      "successes": 241,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.31407
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q2_DISK_1_1",
+      "status": "ok",
+      "latency_samples": 98,
+      "successes": 99,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.430337
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q2_DISK_1_2",
+      "status": "ok",
+      "latency_samples": 99,
+      "successes": 100,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.477321
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q2_DISK_1_3",
+      "status": "ok",
+      "latency_samples": 98,
+      "successes": 99,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.4925
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q2_NO_DISK_1_1",
+      "status": "ok",
+      "latency_samples": 98,
+      "successes": 99,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.41351
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q2_NO_DISK_1_2",
+      "status": "ok",
+      "latency_samples": 98,
+      "successes": 99,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.521895
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q2_NO_DISK_1_3",
+      "status": "ok",
+      "latency_samples": 97,
+      "successes": 98,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.427085
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q2_DISK_10_1",
+      "status": "ok",
+      "latency_samples": 138,
+      "successes": 148,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.925709
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q2_DISK_10_2",
+      "status": "ok",
+      "latency_samples": 180,
+      "successes": 190,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.727905
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q2_DISK_10_3",
+      "status": "ok",
+      "latency_samples": 138,
+      "successes": 148,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.854917
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q2_NO_DISK_50_1",
+      "status": "error",
+      "latency_samples": 0,
+      "successes": 46,
+      "crossing": 46,
+      "errors": 4,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.913614
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q2_NO_DISK_50_2",
+      "status": "error",
+      "latency_samples": 0,
+      "successes": 50,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 298.81179
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q2_NO_DISK_50_3",
+      "status": "error",
+      "latency_samples": 0,
+      "successes": 50,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 299.51442
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q1_50_1",
+      "status": "ok",
+      "latency_samples": 96,
+      "successes": 146,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 297.268096
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q1_50_2",
+      "status": "ok",
+      "latency_samples": 94,
+      "successes": 144,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 297.629634
+    },
+    {
+      "run_id": "m_agricola_mongo_C_Q1_50_3",
+      "status": "ok",
+      "latency_samples": 94,
+      "successes": 144,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 296.137067
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q2_NO_DISK_10_1",
+      "status": "error",
+      "latency_samples": 2527,
+      "successes": 2537,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 2326,
+      "spill": "",
+      "cpu_usage_seconds": 1199.784787
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q2_NO_DISK_10_2",
+      "status": "ok",
+      "latency_samples": 2438,
+      "successes": 2448,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1197.526569
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q2_NO_DISK_10_3",
+      "status": "ok",
+      "latency_samples": 2428,
+      "successes": 2438,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1199.894839
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q1_1_1",
+      "status": "ok",
+      "latency_samples": 255,
+      "successes": 256,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 305.104712
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q1_1_2",
+      "status": "ok",
+      "latency_samples": 255,
+      "successes": 256,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 305.432768
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q1_1_3",
+      "status": "ok",
+      "latency_samples": 257,
+      "successes": 258,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 305.047646
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q1_10_1",
+      "status": "ok",
+      "latency_samples": 635,
+      "successes": 645,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1199.911142
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q1_10_2",
+      "status": "ok",
+      "latency_samples": 635,
+      "successes": 645,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1199.889035
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q1_10_3",
+      "status": "ok",
+      "latency_samples": 632,
+      "successes": 642,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1199.7773
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q2_NO_DISK_1_1",
+      "status": "ok",
+      "latency_samples": 800,
+      "successes": 801,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 303.140202
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q2_NO_DISK_1_2",
+      "status": "ok",
+      "latency_samples": 795,
+      "successes": 796,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 303.151468
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q2_NO_DISK_1_3",
+      "status": "ok",
+      "latency_samples": 799,
+      "successes": 800,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 303.097124
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q2_DISK_1_1",
+      "status": "ok",
+      "latency_samples": 797,
+      "successes": 798,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 303.051773
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q2_DISK_1_2",
+      "status": "ok",
+      "latency_samples": 793,
+      "successes": 794,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 303.137931
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q2_DISK_1_3",
+      "status": "ok",
+      "latency_samples": 792,
+      "successes": 793,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 302.994529
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q2_NO_DISK_50_1",
+      "status": "ok",
+      "latency_samples": 1974,
+      "successes": 2024,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1198.342454
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q2_NO_DISK_50_2",
+      "status": "ok",
+      "latency_samples": 1976,
+      "successes": 2026,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1197.032207
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q2_NO_DISK_50_3",
+      "status": "ok",
+      "latency_samples": 1969,
+      "successes": 2019,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1196.463924
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q1_50_1",
+      "status": "ok",
+      "latency_samples": 449,
+      "successes": 499,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1196.490514
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q1_50_2",
+      "status": "ok",
+      "latency_samples": 442,
+      "successes": 492,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1201.265577
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q1_50_3",
+      "status": "ok",
+      "latency_samples": 439,
+      "successes": 489,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1198.926908
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q2_DISK_10_1",
+      "status": "ok",
+      "latency_samples": 2428,
+      "successes": 2438,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1199.924254
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q2_DISK_10_2",
+      "status": "ok",
+      "latency_samples": 2442,
+      "successes": 2452,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1199.775861
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q2_DISK_10_3",
+      "status": "ok",
+      "latency_samples": 2453,
+      "successes": 2463,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1199.902469
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q2_DISK_50_1",
+      "status": "ok",
+      "latency_samples": 1971,
+      "successes": 2021,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1199.116425
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q2_DISK_50_2",
+      "status": "ok",
+      "latency_samples": 1954,
+      "successes": 2004,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1199.885814
+    },
+    {
+      "run_id": "m_agricola_mongo_A_Q2_DISK_50_3",
+      "status": "ok",
+      "latency_samples": 1962,
+      "successes": 2012,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 1198.821617
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q2_64MB_1_1",
+      "status": "ok",
+      "latency_samples": 1626,
+      "successes": 1627,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.254575
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q2_64MB_1_2",
+      "status": "ok",
+      "latency_samples": 1628,
+      "successes": 1629,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.106113
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q2_64MB_1_3",
+      "status": "ok",
+      "latency_samples": 1631,
+      "successes": 1632,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.117485
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q2_64MB_10_1",
+      "status": "ok",
+      "latency_samples": 1029,
+      "successes": 1039,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.133242
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q2_64MB_10_2",
+      "status": "ok",
+      "latency_samples": 1023,
+      "successes": 1033,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.181317
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q2_64MB_10_3",
+      "status": "ok",
+      "latency_samples": 1032,
+      "successes": 1042,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.172053
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q1_50_1",
+      "status": "error",
+      "latency_samples": 0,
+      "successes": 0,
+      "crossing": 0,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 0.386327
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q1_50_2",
+      "status": "oom",
+      "latency_samples": 0,
+      "successes": 0,
+      "crossing": 0,
+      "errors": 50,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 61.673808
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q1_50_3",
+      "status": "error",
+      "latency_samples": 9,
+      "successes": 13,
+      "crossing": 4,
+      "errors": 46,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 337.542654
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q2_4MB_1_1",
+      "status": "ok",
+      "latency_samples": 1657,
+      "successes": 1658,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.131846
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q2_4MB_1_2",
+      "status": "ok",
+      "latency_samples": 1611,
+      "successes": 1612,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.203971
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q2_4MB_1_3",
+      "status": "ok",
+      "latency_samples": 1631,
+      "successes": 1632,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.115567
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q1_1_1",
+      "status": "spill",
+      "latency_samples": 92,
+      "successes": 93,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 229.406573
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q1_1_2",
+      "status": "spill",
+      "latency_samples": 81,
+      "successes": 82,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 201.685329
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q1_1_3",
+      "status": "spill",
+      "latency_samples": 79,
+      "successes": 80,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 196.905471
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q2_64MB_50_1",
+      "status": "ok",
+      "latency_samples": 959,
+      "successes": 1009,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.903227
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q2_64MB_50_2",
+      "status": "ok",
+      "latency_samples": 955,
+      "successes": 1005,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.988863
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q2_64MB_50_3",
+      "status": "ok",
+      "latency_samples": 962,
+      "successes": 1012,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.817397
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q2_4MB_10_1",
+      "status": "ok",
+      "latency_samples": 1022,
+      "successes": 1032,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.123202
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q2_4MB_10_2",
+      "status": "ok",
+      "latency_samples": 1029,
+      "successes": 1039,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.245463
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q2_4MB_10_3",
+      "status": "ok",
+      "latency_samples": 1040,
+      "successes": 1050,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.383875
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q2_4MB_50_1",
+      "status": "ok",
+      "latency_samples": 957,
+      "successes": 1007,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.722062
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q2_4MB_50_2",
+      "status": "ok",
+      "latency_samples": 961,
+      "successes": 1011,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 600.123129
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q2_4MB_50_3",
+      "status": "ok",
+      "latency_samples": 967,
+      "successes": 1017,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.727291
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q1_10_1",
+      "status": "spill",
+      "latency_samples": 31,
+      "successes": 41,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 156.708912
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q1_10_2",
+      "status": "spill",
+      "latency_samples": 30,
+      "successes": 40,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 130.404505
+    },
+    {
+      "run_id": "m_agricola_postgres_B_Q1_10_3",
+      "status": "spill",
+      "latency_samples": 31,
+      "successes": 41,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "true",
+      "cpu_usage_seconds": 137.021851
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q2_NO_DISK_10_1",
+      "status": "ok",
+      "latency_samples": 1224,
+      "successes": 1234,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.602317
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q2_NO_DISK_10_2",
+      "status": "ok",
+      "latency_samples": 1207,
+      "successes": 1217,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.844541
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q2_NO_DISK_10_3",
+      "status": "ok",
+      "latency_samples": 1200,
+      "successes": 1210,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.834009
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q2_NO_DISK_1_1",
+      "status": "ok",
+      "latency_samples": 806,
+      "successes": 807,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 302.889865
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q2_NO_DISK_1_2",
+      "status": "ok",
+      "latency_samples": 803,
+      "successes": 804,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 302.614831
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q2_NO_DISK_1_3",
+      "status": "ok",
+      "latency_samples": 808,
+      "successes": 809,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 302.878102
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q2_NO_DISK_50_1",
+      "status": "ok",
+      "latency_samples": 975,
+      "successes": 1025,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 598.855221
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q2_NO_DISK_50_2",
+      "status": "ok",
+      "latency_samples": 970,
+      "successes": 1020,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 595.957895
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q2_NO_DISK_50_3",
+      "status": "ok",
+      "latency_samples": 975,
+      "successes": 1025,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 598.669608
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q1_1_1",
+      "status": "ok",
+      "latency_samples": 258,
+      "successes": 259,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 304.973672
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q1_1_2",
+      "status": "ok",
+      "latency_samples": 261,
+      "successes": 262,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 305.147336
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q1_1_3",
+      "status": "ok",
+      "latency_samples": 259,
+      "successes": 260,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 304.939598
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q2_DISK_10_1",
+      "status": "ok",
+      "latency_samples": 1196,
+      "successes": 1206,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.811358
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q2_DISK_10_2",
+      "status": "ok",
+      "latency_samples": 1194,
+      "successes": 1204,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 600.0315
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q2_DISK_10_3",
+      "status": "ok",
+      "latency_samples": 1193,
+      "successes": 1203,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.805914
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q1_10_1",
+      "status": "ok",
+      "latency_samples": 316,
+      "successes": 326,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.546871
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q1_10_2",
+      "status": "ok",
+      "latency_samples": 318,
+      "successes": 328,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.760099
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q1_10_3",
+      "status": "ok",
+      "latency_samples": 318,
+      "successes": 328,
+      "crossing": 10,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.664712
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q2_DISK_50_1",
+      "status": "ok",
+      "latency_samples": 991,
+      "successes": 1041,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 601.003221
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q2_DISK_50_2",
+      "status": "ok",
+      "latency_samples": 969,
+      "successes": 1019,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 595.777047
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q2_DISK_50_3",
+      "status": "ok",
+      "latency_samples": 970,
+      "successes": 1020,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 598.093704
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q1_50_1",
+      "status": "ok",
+      "latency_samples": 203,
+      "successes": 253,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 599.686502
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q1_50_2",
+      "status": "ok",
+      "latency_samples": 203,
+      "successes": 253,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 598.733956
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q1_50_3",
+      "status": "ok",
+      "latency_samples": 210,
+      "successes": 260,
+      "crossing": 50,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 598.137677
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q2_DISK_1_1",
+      "status": "ok",
+      "latency_samples": 806,
+      "successes": 807,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 303.228284
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q2_DISK_1_2",
+      "status": "ok",
+      "latency_samples": 808,
+      "successes": 809,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 302.992376
+    },
+    {
+      "run_id": "m_agricola_mongo_B_Q2_DISK_1_3",
+      "status": "ok",
+      "latency_samples": 806,
+      "successes": 807,
+      "crossing": 1,
+      "errors": 0,
+      "telemetry_error": null,
+      "profiler_missing": 0,
+      "spill": "false",
+      "cpu_usage_seconds": 302.981281
+    }
+  ],
+  "cells_summary": [
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_A_BASELINE",
+      "query_id": "Q1",
+      "concurrency": 1,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 0.853333,
+        "min": 0.853333,
+        "max": 0.86
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 1209.615,
+        "min": 1198.937,
+        "max": 1228.736
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 1252.184,
+        "min": 1223.123,
+        "max": 1254.921
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 653.25,
+        "min": 606.75,
+        "max": 676.637
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_A_BASELINE",
+      "query_id": "Q1",
+      "concurrency": 10,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 2.15,
+        "min": 2.14,
+        "max": 2.15
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 4995.459,
+        "min": 4981.981,
+        "max": 4998.582
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 5111.713,
+        "min": 5082.522,
+        "max": 5195.463
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 1814.910424,
+        "min": 1803.463396,
+        "max": 1816.558983
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 703.176,
+        "min": 699.723,
+        "max": 707.453
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_A_BASELINE",
+      "query_id": "Q1",
+      "concurrency": 50,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 1.64,
+        "min": 1.63,
+        "max": 1.663333
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 34302.334,
+        "min": 34300.022,
+        "max": 34793.191
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 36105.693,
+        "min": 35499.889,
+        "max": 36899.28
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 3522.193712,
+        "min": 3517.925366,
+        "max": 3530.394573
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 1020.309,
+        "min": 1018.344,
+        "max": 1023.262
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_A_BASELINE",
+      "query_id": "Q2_DISK",
+      "concurrency": 1,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 2.646667,
+        "min": 2.643333,
+        "max": 2.66
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 413.495,
+        "min": 412.081,
+        "max": 416.196
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 431.131,
+        "min": 427.668,
+        "max": 437.727
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 689.297,
+        "min": 672.91,
+        "max": 691.023
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_A_BASELINE",
+      "query_id": "Q2_DISK",
+      "concurrency": 10,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 8.173333,
+        "min": 8.126667,
+        "max": 8.21
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 1371.742,
+        "min": 1323.563,
+        "max": 1384.444
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 1435.382,
+        "min": 1418.919,
+        "max": 1485.837
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 1806.078989,
+        "min": 1801.418563,
+        "max": 1808.077817
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 1018.004,
+        "min": 1016.352,
+        "max": 1018.055
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_A_BASELINE",
+      "query_id": "Q2_DISK",
+      "concurrency": 50,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 6.706667,
+        "min": 6.68,
+        "max": 6.736667
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 11892.491,
+        "min": 11601.291,
+        "max": 12007.867
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 14191.553,
+        "min": 13608.745,
+        "max": 14287.369
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 3573.50491,
+        "min": 3573.461531,
+        "max": 3574.724788
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 1015.414,
+        "min": 1015.258,
+        "max": 1019.09
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_A_BASELINE",
+      "query_id": "Q2_NO_DISK",
+      "concurrency": 1,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 2.666667,
+        "min": 2.653333,
+        "max": 2.67
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 408.318,
+        "min": 407.041,
+        "max": 411.532
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 429.132,
+        "min": 424.844,
+        "max": 434.609
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 690.484,
+        "min": 682.359,
+        "max": 690.848
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_A_BASELINE",
+      "query_id": "Q2_NO_DISK",
+      "concurrency": 10,
+      "n_total": 3,
+      "n_valid": 2,
+      "states": {
+        "error": 1,
+        "ok": 2
+      },
+      "throughput_qps": {
+        "n": 2,
+        "median": 8.1433335,
+        "min": 8.126667,
+        "max": 8.16
+      },
+      "latency_p95_ms": {
+        "n": 2,
+        "median": 1382.1875,
+        "min": 1381.909,
+        "max": 1382.466
+      },
+      "latency_p99_ms": {
+        "n": 2,
+        "median": 1472.005,
+        "min": 1467.855,
+        "max": 1476.155
+      },
+      "cpu_throttled_seconds": {
+        "n": 2,
+        "median": 1808.0351655,
+        "min": 1805.988106,
+        "max": 1810.082225
+      },
+      "max_rss_mb": {
+        "n": 2,
+        "median": 651.2874999999999,
+        "min": 639.102,
+        "max": 663.473
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_A_BASELINE",
+      "query_id": "Q2_NO_DISK",
+      "concurrency": 50,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 6.746667,
+        "min": 6.73,
+        "max": 6.753333
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 11706.84,
+        "min": 11697.179,
+        "max": 12191.157
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 13694.968,
+        "min": 13584.443,
+        "max": 15292.456
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 3565.280685,
+        "min": 3564.116293,
+        "max": 3570.603144
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 799.992,
+        "min": 784.672,
+        "max": 826.832
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_B_MEDIUM",
+      "query_id": "Q1",
+      "concurrency": 1,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 0.866667,
+        "min": 0.863333,
+        "max": 0.873333
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 1195.656,
+        "min": 1188.19,
+        "max": 1210.064
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 1221.478,
+        "min": 1215.413,
+        "max": 1230.164
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 0.449941,
+        "min": 0.401986,
+        "max": 0.516275
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 835.578,
+        "min": 787.719,
+        "max": 838.266
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_B_MEDIUM",
+      "query_id": "Q1",
+      "concurrency": 10,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 1.093333,
+        "min": 1.086667,
+        "max": 1.093333
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 9899.074,
+        "min": 9796.101,
+        "max": 9984.868
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 10095.355,
+        "min": 10013.673,
+        "max": 10099.233
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 2429.152185,
+        "min": 2424.120836,
+        "max": 2435.200356
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 813.812,
+        "min": 803.129,
+        "max": 822.578
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_B_MEDIUM",
+      "query_id": "Q1",
+      "concurrency": 50,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 0.843333,
+        "min": 0.843333,
+        "max": 0.866667
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 66195.458,
+        "min": 65891.836,
+        "max": 67197.129
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 69897.812,
+        "min": 69494.997,
+        "max": 70995.801
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 4103.722932,
+        "min": 4084.028379,
+        "max": 4119.627228
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 984.375,
+        "min": 982.512,
+        "max": 1013.992
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_B_MEDIUM",
+      "query_id": "Q2_DISK",
+      "concurrency": 1,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 2.69,
+        "min": 2.69,
+        "max": 2.696667
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 409.296,
+        "min": 407.532,
+        "max": 410.813
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 428.989,
+        "min": 423.687,
+        "max": 437.517
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 0.443308,
+        "min": 0.393646,
+        "max": 0.446189
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 952.203,
+        "min": 926.02,
+        "max": 973.781
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_B_MEDIUM",
+      "query_id": "Q2_DISK",
+      "concurrency": 10,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 4.013333,
+        "min": 4.01,
+        "max": 4.02
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 2805.696,
+        "min": 2805.68,
+        "max": 2813.9
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 3000.094,
+        "min": 2996.996,
+        "max": 3005.871
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 2437.066353,
+        "min": 2432.813245,
+        "max": 2445.805214
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 800.453,
+        "min": 798.098,
+        "max": 801.09
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_B_MEDIUM",
+      "query_id": "Q2_DISK",
+      "concurrency": 50,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 3.4,
+        "min": 3.396667,
+        "max": 3.47
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 24600.773,
+        "min": 23499.389,
+        "max": 24993.911
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 30197.652,
+        "min": 28998.741,
+        "max": 31698.11
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 4163.997581,
+        "min": 4148.690195,
+        "max": 4179.585448
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 842.754,
+        "min": 813.906,
+        "max": 845.664
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_B_MEDIUM",
+      "query_id": "Q2_NO_DISK",
+      "concurrency": 1,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 2.69,
+        "min": 2.68,
+        "max": 2.696667
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 404.766,
+        "min": 404.163,
+        "max": 409.36
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 418.807,
+        "min": 416.799,
+        "max": 428.993
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 0.390087,
+        "min": 0.37881,
+        "max": 0.431797
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 726.523,
+        "min": 704.613,
+        "max": 732.523
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_B_MEDIUM",
+      "query_id": "Q2_NO_DISK",
+      "concurrency": 10,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 4.056667,
+        "min": 4.033333,
+        "max": 4.113333
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 2795.577,
+        "min": 2782.521,
+        "max": 2798.644
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 2979.491,
+        "min": 2901.359,
+        "max": 2998.363
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 2444.993578,
+        "min": 2443.727391,
+        "max": 2445.388675
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 708.43,
+        "min": 618.57,
+        "max": 729.094
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_B_MEDIUM",
+      "query_id": "Q2_NO_DISK",
+      "concurrency": 50,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 3.416667,
+        "min": 3.4,
+        "max": 3.416667
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 24095.937,
+        "min": 23692.606,
+        "max": 25004.745
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 29799.864,
+        "min": 28498.646,
+        "max": 30800.055
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 4167.38099,
+        "min": 4147.032255,
+        "max": 4167.425238
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 782.281,
+        "min": 764.078,
+        "max": 809.848
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_C_SEVERE",
+      "query_id": "Q1",
+      "concurrency": 1,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 0.803333,
+        "min": 0.803333,
+        "max": 0.806667
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 1316.768,
+        "min": 1307.18,
+        "max": 1366.55
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 1630.953,
+        "min": 1627.461,
+        "max": 1638.766
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 13.467452,
+        "min": 12.637164,
+        "max": 14.512524
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 544.676,
+        "min": 532.117,
+        "max": 553.016
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_C_SEVERE",
+      "query_id": "Q1",
+      "concurrency": 10,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 0.496667,
+        "min": 0.49,
+        "max": 0.5
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 21687.952,
+        "min": 21396.862,
+        "max": 21699.038
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 22195.074,
+        "min": 21994.562,
+        "max": 22696.047
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 2783.05921,
+        "min": 2763.224094,
+        "max": 2787.262595
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 588.445,
+        "min": 581.145,
+        "max": 594.477
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_C_SEVERE",
+      "query_id": "Q1",
+      "concurrency": 50,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 0.48,
+        "min": 0.48,
+        "max": 0.486667
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 131996.819,
+        "min": 127096.471,
+        "max": 136293.234
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 142992.639,
+        "min": 135386.36,
+        "max": 146690.194
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 4326.268739,
+        "min": 4325.217372,
+        "max": 4338.033054
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 773.258,
+        "min": 754.887,
+        "max": 790.816
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_C_SEVERE",
+      "query_id": "Q2_DISK",
+      "concurrency": 1,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 0.33,
+        "min": 0.33,
+        "max": 0.333333
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 3396.434,
+        "min": 3377.991,
+        "max": 3428.634
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 3557.166,
+        "min": 3497.171,
+        "max": 3632.061
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 15.604265,
+        "min": 15.343199,
+        "max": 15.711143
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 555.57,
+        "min": 542.555,
+        "max": 561.02
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_C_SEVERE",
+      "query_id": "Q2_DISK",
+      "concurrency": 10,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 0.493333,
+        "min": 0.493333,
+        "max": 0.633333
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 29490.634,
+        "min": 16585.802,
+        "max": 37599.515
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 30497.974,
+        "min": 16594.184,
+        "max": 43786.326
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 2007.952872,
+        "min": 1833.16743,
+        "max": 2075.214635
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 575.043,
+        "min": 573.117,
+        "max": 585.395
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_C_SEVERE",
+      "query_id": "Q2_DISK",
+      "concurrency": 50,
+      "n_total": 3,
+      "n_valid": 0,
+      "states": {
+        "error": 3
+      },
+      "throughput_qps": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "latency_p95_ms": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "latency_p99_ms": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "cpu_throttled_seconds": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "max_rss_mb": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_C_SEVERE",
+      "query_id": "Q2_NO_DISK",
+      "concurrency": 1,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 0.33,
+        "min": 0.326667,
+        "max": 0.33
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 3411.444,
+        "min": 3405.255,
+        "max": 3483.551
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 3590.577,
+        "min": 3581.66,
+        "max": 3764.676
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 15.907479,
+        "min": 15.058596,
+        "max": 16.155192
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 558.242,
+        "min": 549.875,
+        "max": 567.172
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_C_SEVERE",
+      "query_id": "Q2_NO_DISK",
+      "concurrency": 10,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 0.336667,
+        "min": 0.296667,
+        "max": 0.376667
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 36593.112,
+        "min": 34904.861,
+        "max": 49495.0
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 37803.104,
+        "min": 36699.59,
+        "max": 51602.902
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 2212.172306,
+        "min": 2194.339243,
+        "max": 2313.663866
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 580.332,
+        "min": 578.695,
+        "max": 591.41
+      }
+    },
+    {
+      "engine": "mongodb",
+      "profile": "PROFILE_C_SEVERE",
+      "query_id": "Q2_NO_DISK",
+      "concurrency": 50,
+      "n_total": 3,
+      "n_valid": 0,
+      "states": {
+        "error": 3
+      },
+      "throughput_qps": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "latency_p95_ms": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "latency_p99_ms": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "cpu_throttled_seconds": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "max_rss_mb": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_A_BASELINE",
+      "query_id": "Q1",
+      "concurrency": 1,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "spill": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 0.57,
+        "min": 0.566667,
+        "max": 0.57
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 1814.438,
+        "min": 1804.962,
+        "max": 1826.521
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 1852.856,
+        "min": 1842.221,
+        "max": 1860.989
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.002252
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 102.363,
+        "min": 102.328,
+        "max": 102.664
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_A_BASELINE",
+      "query_id": "Q1",
+      "concurrency": 10,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "spill": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 0.466667,
+        "min": 0.436667,
+        "max": 0.476667
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 38923.195,
+        "min": 33773.954,
+        "max": 44219.521
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 42999.726,
+        "min": 42743.359,
+        "max": 52496.988
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 236.856196,
+        "min": 189.076776,
+        "max": 320.714723
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 571.98,
+        "min": 571.281,
+        "max": 573.496
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_A_BASELINE",
+      "query_id": "Q1",
+      "concurrency": 50,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "spill": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 0.18,
+        "min": 0.18,
+        "max": 0.22
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 166957.883,
+        "min": 163600.334,
+        "max": 176128.738
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 166957.883,
+        "min": 163600.334,
+        "max": 176128.738
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 181.362735,
+        "min": 143.752445,
+        "max": 236.683741
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 1981.578,
+        "min": 1980.762,
+        "max": 1986.746
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_A_BASELINE",
+      "query_id": "Q2_4MB",
+      "concurrency": 1,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 9.87,
+        "min": 9.793333,
+        "max": 9.9
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 110.979,
+        "min": 110.85,
+        "max": 113.21
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 127.029,
+        "min": 125.014,
+        "max": 131.832
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 0.001269,
+        "min": 0.0,
+        "max": 0.002784
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 10.707,
+        "min": 10.656,
+        "max": 11.453
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_A_BASELINE",
+      "query_id": "Q2_4MB",
+      "concurrency": 10,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 7.21,
+        "min": 7.186667,
+        "max": 7.216667
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 2395.885,
+        "min": 2387.335,
+        "max": 2398.009
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 2500.604,
+        "min": 2490.336,
+        "max": 2503.01
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 2531.024773,
+        "min": 2512.985722,
+        "max": 2536.229258
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 38.496,
+        "min": 38.02,
+        "max": 38.664
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_A_BASELINE",
+      "query_id": "Q2_4MB",
+      "concurrency": 50,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 6.9,
+        "min": 6.816667,
+        "max": 6.91
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 9294.185,
+        "min": 9282.654,
+        "max": 9395.609
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 9805.652,
+        "min": 9798.426,
+        "max": 9901.021
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 2849.72002,
+        "min": 2839.622412,
+        "max": 2858.03408
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 124.676,
+        "min": 124.152,
+        "max": 157.898
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_A_BASELINE",
+      "query_id": "Q2_64MB",
+      "concurrency": 1,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 9.663333,
+        "min": 9.64,
+        "max": 9.716667
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 114.362,
+        "min": 113.68,
+        "max": 114.794
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 124.583,
+        "min": 124.095,
+        "max": 126.001
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 0.002607,
+        "min": 0.0,
+        "max": 0.008587
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 10.656,
+        "min": 10.637,
+        "max": 15.395
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_A_BASELINE",
+      "query_id": "Q2_64MB",
+      "concurrency": 10,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 7.23,
+        "min": 7.196667,
+        "max": 7.24
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 2394.027,
+        "min": 2392.161,
+        "max": 2402.772
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 2497.078,
+        "min": 2494.589,
+        "max": 2503.166
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 2482.022895,
+        "min": 2479.249547,
+        "max": 2484.830063
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 38.258,
+        "min": 38.117,
+        "max": 39.184
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_A_BASELINE",
+      "query_id": "Q2_64MB",
+      "concurrency": 50,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 6.893333,
+        "min": 6.876667,
+        "max": 6.916667
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 9213.274,
+        "min": 9203.681,
+        "max": 9306.948
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 9697.403,
+        "min": 9605.19,
+        "max": 9786.277
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 2847.573454,
+        "min": 2844.53389,
+        "max": 2859.156137
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 122.176,
+        "min": 121.207,
+        "max": 123.887
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_B_MEDIUM",
+      "query_id": "Q1",
+      "concurrency": 1,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "spill": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 0.273333,
+        "min": 0.266667,
+        "max": 0.31
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 5315.34,
+        "min": 4581.146,
+        "max": 6371.274
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 7109.08,
+        "min": 6463.715,
+        "max": 7395.55
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 30.298921,
+        "min": 30.118136,
+        "max": 34.380946
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 102.32,
+        "min": 102.32,
+        "max": 102.516
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_B_MEDIUM",
+      "query_id": "Q1",
+      "concurrency": 10,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "spill": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 0.136667,
+        "min": 0.133333,
+        "max": 0.136667
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 92876.345,
+        "min": 89481.439,
+        "max": 105881.746
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 94892.02,
+        "min": 93465.13,
+        "max": 107124.521
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 135.06919,
+        "min": 107.751655,
+        "max": 191.410651
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 568.723,
+        "min": 568.703,
+        "max": 569.078
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_B_MEDIUM",
+      "query_id": "Q1",
+      "concurrency": 50,
+      "n_total": 3,
+      "n_valid": 0,
+      "states": {
+        "error": 2,
+        "oom": 1
+      },
+      "throughput_qps": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "latency_p95_ms": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "latency_p99_ms": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "cpu_throttled_seconds": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "max_rss_mb": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_B_MEDIUM",
+      "query_id": "Q2_4MB",
+      "concurrency": 1,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 5.44,
+        "min": 5.373333,
+        "max": 5.526667
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 199.071,
+        "min": 197.81,
+        "max": 199.598
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 211.015,
+        "min": 205.915,
+        "max": 213.098
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 475.265699,
+        "min": 464.71226,
+        "max": 486.245694
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 10.789,
+        "min": 10.77,
+        "max": 13.34
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_B_MEDIUM",
+      "query_id": "Q2_4MB",
+      "concurrency": 10,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 3.463333,
+        "min": 3.44,
+        "max": 3.5
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 4999.196,
+        "min": 4903.549,
+        "max": 5000.562
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 5202.52,
+        "min": 5105.01,
+        "max": 5290.988
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 2922.797968,
+        "min": 2918.085665,
+        "max": 2929.54656
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 38.723,
+        "min": 38.086,
+        "max": 39.234
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_B_MEDIUM",
+      "query_id": "Q2_4MB",
+      "concurrency": 50,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 3.37,
+        "min": 3.356667,
+        "max": 3.39
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 19298.186,
+        "min": 19196.823,
+        "max": 19390.689
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 20600.079,
+        "min": 20200.193,
+        "max": 20995.185
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 3313.71262,
+        "min": 3302.239536,
+        "max": 3323.355837
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 124.113,
+        "min": 122.07,
+        "max": 124.852
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_B_MEDIUM",
+      "query_id": "Q2_64MB",
+      "concurrency": 1,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 5.43,
+        "min": 5.423333,
+        "max": 5.44
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 198.877,
+        "min": 198.747,
+        "max": 199.266
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 207.151,
+        "min": 205.472,
+        "max": 208.019
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 476.823949,
+        "min": 469.928014,
+        "max": 485.824049
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 10.98,
+        "min": 10.633,
+        "max": 12.188
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_B_MEDIUM",
+      "query_id": "Q2_64MB",
+      "concurrency": 10,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 3.463333,
+        "min": 3.443333,
+        "max": 3.473333
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 4998.399,
+        "min": 4997.421,
+        "max": 5002.434
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 5210.217,
+        "min": 5207.688,
+        "max": 5289.995
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 2935.037659,
+        "min": 2894.16694,
+        "max": 2957.915362
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 39.121,
+        "min": 38.363,
+        "max": 39.945
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_B_MEDIUM",
+      "query_id": "Q2_64MB",
+      "concurrency": 50,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 3.363333,
+        "min": 3.35,
+        "max": 3.373333
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 19381.836,
+        "min": 19099.188,
+        "max": 19402.743
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 20500.938,
+        "min": 20298.169,
+        "max": 20700.567
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 3329.273883,
+        "min": 3310.114765,
+        "max": 3335.657022
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 123.312,
+        "min": 122.582,
+        "max": 123.691
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_C_SEVERE",
+      "query_id": "Q1",
+      "concurrency": 1,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "spill": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 0.31,
+        "min": 0.293333,
+        "max": 0.31
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 4603.905,
+        "min": 4342.004,
+        "max": 4773.686
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 5580.907,
+        "min": 4798.394,
+        "max": 5849.492
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 152.679073,
+        "min": 144.022514,
+        "max": 157.566032
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 102.531,
+        "min": 102.258,
+        "max": 102.539
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_C_SEVERE",
+      "query_id": "Q1",
+      "concurrency": 10,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "spill": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 0.196667,
+        "min": 0.19,
+        "max": 0.21
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 64621.996,
+        "min": 61595.006,
+        "max": 66571.792
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 65120.058,
+        "min": 63996.373,
+        "max": 67601.674
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 1153.83722,
+        "min": 1009.63345,
+        "max": 1154.72892
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 571.383,
+        "min": 571.262,
+        "max": 571.445
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_C_SEVERE",
+      "query_id": "Q1",
+      "concurrency": 50,
+      "n_total": 3,
+      "n_valid": 0,
+      "states": {
+        "error": 3
+      },
+      "throughput_qps": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "latency_p95_ms": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "latency_p99_ms": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "cpu_throttled_seconds": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "max_rss_mb": {
+        "n": 0,
+        "median": null,
+        "min": null,
+        "max": null
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_C_SEVERE",
+      "query_id": "Q2_4MB",
+      "concurrency": 1,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 2.583333,
+        "min": 2.573333,
+        "max": 2.59
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 402.573,
+        "min": 402.289,
+        "max": 403.094
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 475.574,
+        "min": 472.182,
+        "max": 477.899
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 792.56284,
+        "min": 785.978759,
+        "max": 801.353221
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 10.949,
+        "min": 10.609,
+        "max": 13.508
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_C_SEVERE",
+      "query_id": "Q2_4MB",
+      "concurrency": 10,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 1.586667,
+        "min": 1.573333,
+        "max": 1.6
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 11001.684,
+        "min": 10902.693,
+        "max": 11298.707
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 11599.706,
+        "min": 11397.686,
+        "max": 11997.112
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 3167.872373,
+        "min": 3122.905449,
+        "max": 3185.714396
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 39.078,
+        "min": 38.758,
+        "max": 41.453
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_C_SEVERE",
+      "query_id": "Q2_4MB",
+      "concurrency": 50,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 1.596667,
+        "min": 1.56,
+        "max": 1.6
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 41695.564,
+        "min": 41492.481,
+        "max": 41898.185
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 44599.537,
+        "min": 43598.589,
+        "max": 44798.985
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 3655.962268,
+        "min": 3631.897037,
+        "max": 3656.821601
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 123.176,
+        "min": 122.531,
+        "max": 123.652
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_C_SEVERE",
+      "query_id": "Q2_64MB",
+      "concurrency": 1,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 2.606667,
+        "min": 2.57,
+        "max": 2.623333
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 400.927,
+        "min": 400.699,
+        "max": 403.262
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 414.863,
+        "min": 412.82,
+        "max": 475.535
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 792.514425,
+        "min": 786.320382,
+        "max": 798.546279
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 10.895,
+        "min": 10.613,
+        "max": 11.836
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_C_SEVERE",
+      "query_id": "Q2_64MB",
+      "concurrency": 10,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 1.56,
+        "min": 1.543333,
+        "max": 1.576667
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 11201.236,
+        "min": 11106.718,
+        "max": 11396.491
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 11702.977,
+        "min": 11699.253,
+        "max": 11995.153
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 3172.063251,
+        "min": 3128.206473,
+        "max": 3186.112884
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 38.992,
+        "min": 38.816,
+        "max": 39.953
+      }
+    },
+    {
+      "engine": "postgresql",
+      "profile": "PROFILE_C_SEVERE",
+      "query_id": "Q2_64MB",
+      "concurrency": 50,
+      "n_total": 3,
+      "n_valid": 3,
+      "states": {
+        "ok": 3
+      },
+      "throughput_qps": {
+        "n": 3,
+        "median": 1.59,
+        "min": 1.576667,
+        "max": 1.596667
+      },
+      "latency_p95_ms": {
+        "n": 3,
+        "median": 40897.462,
+        "min": 40398.772,
+        "max": 41597.959
+      },
+      "latency_p99_ms": {
+        "n": 3,
+        "median": 45098.491,
+        "min": 43001.005,
+        "max": 45599.726
+      },
+      "cpu_throttled_seconds": {
+        "n": 3,
+        "median": 3668.73096,
+        "min": 3652.053347,
+        "max": 3695.102989
+      },
+      "max_rss_mb": {
+        "n": 3,
+        "median": 124.012,
+        "min": 123.266,
+        "max": 124.676
+      }
+    }
+  ]
+}

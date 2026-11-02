@@ -1,0 +1,151 @@
+[
+  {
+    "Plan": {
+      "Node Type": "Limit",
+      "Parallel Aware": false,
+      "Async Capable": false,
+      "Startup Cost": 58485.04,
+      "Total Cost": 58582.06,
+      "Plan Rows": 833,
+      "Plan Width": 96,
+      "Actual Startup Time": 102.192,
+      "Actual Total Time": 104.966,
+      "Actual Rows": 1000.0,
+      "Actual Loops": 1,
+      "Disabled": false,
+      "Shared Hit Blocks": 920,
+      "Shared Read Blocks": 50890,
+      "Shared Dirtied Blocks": 0,
+      "Shared Written Blocks": 0,
+      "Local Hit Blocks": 0,
+      "Local Read Blocks": 0,
+      "Local Dirtied Blocks": 0,
+      "Local Written Blocks": 0,
+      "Temp Read Blocks": 0,
+      "Temp Written Blocks": 0,
+      "Plans": [
+        {
+          "Node Type": "Gather Merge",
+          "Parent Relationship": "Outer",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Startup Cost": 58485.04,
+          "Total Cost": 58582.06,
+          "Plan Rows": 833,
+          "Plan Width": 96,
+          "Actual Startup Time": 102.19,
+          "Actual Total Time": 104.924,
+          "Actual Rows": 1000.0,
+          "Actual Loops": 1,
+          "Disabled": false,
+          "Workers Planned": 2,
+          "Workers Launched": 2,
+          "Shared Hit Blocks": 920,
+          "Shared Read Blocks": 50890,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0,
+          "Plans": [
+            {
+              "Node Type": "Sort",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Startup Cost": 57485.02,
+              "Total Cost": 57485.89,
+              "Plan Rows": 347,
+              "Plan Width": 96,
+              "Actual Startup Time": 94.334,
+              "Actual Total Time": 94.359,
+              "Actual Rows": 742.0,
+              "Actual Loops": 3,
+              "Disabled": false,
+              "Sort Key": [
+                "((((data -> 'resultado'::text) ->> 'total_kg'::text))::numeric) DESC"
+              ],
+              "Sort Method": "top-N heapsort",
+              "Sort Space Used": 273,
+              "Sort Space Type": "Memory",
+              "Shared Hit Blocks": 920,
+              "Shared Read Blocks": 50890,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0,
+              "Workers": [
+                {
+                  "Worker Number": 0,
+                  "Sort Method": "top-N heapsort",
+                  "Sort Space Used": 276,
+                  "Sort Space Type": "Memory"
+                },
+                {
+                  "Worker Number": 1,
+                  "Sort Method": "top-N heapsort",
+                  "Sort Space Used": 271,
+                  "Sort Space Type": "Memory"
+                }
+              ],
+              "Plans": [
+                {
+                  "Node Type": "Seq Scan",
+                  "Parent Relationship": "Outer",
+                  "Parallel Aware": true,
+                  "Async Capable": false,
+                  "Relation Name": "cosechas",
+                  "Alias": "cosechas",
+                  "Startup Cost": 0.0,
+                  "Total Cost": 57470.38,
+                  "Plan Rows": 347,
+                  "Plan Width": 96,
+                  "Actual Startup Time": 0.126,
+                  "Actual Total Time": 84.696,
+                  "Actual Rows": 66576.33,
+                  "Actual Loops": 3,
+                  "Disabled": false,
+                  "Filter": "((((data -> 'resultado'::text) ->> 'estado'::text) = 'finalizada'::text) AND (((data ->> 'fecha'::text))::timestamp with time zone >= '2026-01-01 00:00:00+00'::timestamp with time zone))",
+                  "Rows Removed by Filter": 100090,
+                  "Shared Hit Blocks": 846,
+                  "Shared Read Blocks": 50890,
+                  "Shared Dirtied Blocks": 0,
+                  "Shared Written Blocks": 0,
+                  "Local Hit Blocks": 0,
+                  "Local Read Blocks": 0,
+                  "Local Dirtied Blocks": 0,
+                  "Local Written Blocks": 0,
+                  "Temp Read Blocks": 0,
+                  "Temp Written Blocks": 0,
+                  "Workers": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "Planning": {
+      "Shared Hit Blocks": 0,
+      "Shared Read Blocks": 0,
+      "Shared Dirtied Blocks": 0,
+      "Shared Written Blocks": 0,
+      "Local Hit Blocks": 0,
+      "Local Read Blocks": 0,
+      "Local Dirtied Blocks": 0,
+      "Local Written Blocks": 0,
+      "Temp Read Blocks": 0,
+      "Temp Written Blocks": 0
+    },
+    "Planning Time": 0.077,
+    "Triggers": [],
+    "Execution Time": 105.008
+  }
+]

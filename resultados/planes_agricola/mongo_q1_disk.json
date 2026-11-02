@@ -1,0 +1,206 @@
+{
+  "explainVersion": "1",
+  "stages": [
+    {
+      "$cursor": {
+        "queryPlanner": {
+          "namespace": "document_benchmark.cosechas",
+          "parsedQuery": {},
+          "indexFilterSet": false,
+          "queryHash": "48CF7472",
+          "planCacheShapeHash": "48CF7472",
+          "planCacheKey": "A1042DFD",
+          "optimizationTimeMillis": 1,
+          "optimizationTimeMicros": 1704,
+          "cursorType": "regular",
+          "maxIndexedOrSolutionsReached": false,
+          "maxIndexedAndSolutionsReached": false,
+          "maxScansToExplodeReached": false,
+          "prunedSimilarIndexes": false,
+          "winningPlan": {
+            "isCached": false,
+            "stage": "PROJECTION_DEFAULT",
+            "transformBy": {
+              "lotes": 1,
+              "productor.ubicacion.country": 1,
+              "_id": 0
+            },
+            "inputStage": {
+              "stage": "COLLSCAN",
+              "nss": "document_benchmark.cosechas",
+              "direction": "forward"
+            }
+          },
+          "rejectedPlans": []
+        },
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 500000,
+          "executionTimeMillis": 1212,
+          "executionTimeMicros": 1212071,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 500000,
+          "executionStages": {
+            "isCached": false,
+            "stage": "PROJECTION_DEFAULT",
+            "nReturned": 500000,
+            "executionTimeMillisEstimate": 40,
+            "works": 500001,
+            "advanced": 500000,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 104,
+            "restoreState": 103,
+            "isEOF": 1,
+            "transformBy": {
+              "lotes": 1,
+              "productor.ubicacion.country": 1,
+              "_id": 0
+            },
+            "peakTrackedMemBytes": 0,
+            "inputStage": {
+              "stage": "COLLSCAN",
+              "nReturned": 500000,
+              "executionTimeMillisEstimate": 15,
+              "works": 500001,
+              "advanced": 500000,
+              "needTime": 0,
+              "needYield": 0,
+              "saveState": 104,
+              "restoreState": 103,
+              "isEOF": 1,
+              "nss": "document_benchmark.cosechas",
+              "direction": "forward",
+              "docsExamined": 500000,
+              "seeks": 0
+            }
+          }
+        }
+      },
+      "nReturned": 500000,
+      "executionTimeMillisEstimate": 244
+    },
+    {
+      "$unwind": {
+        "path": "$lotes"
+      },
+      "nReturned": 1499983,
+      "executionTimeMillisEstimate": 462
+    },
+    {
+      "$match": {
+        "lotes.kg_por_caja": {
+          "$gt": 50
+        }
+      },
+      "nReturned": 1177933,
+      "executionTimeMillisEstimate": 700,
+      "expressionEvaluationPeakMemoryBytes": 512
+    },
+    {
+      "$group": {
+        "_id": {
+          "pais": "$productor.ubicacion.country",
+          "cultivo": "$lotes.cultivo"
+        },
+        "total_kg": {
+          "$sum": {
+            "$multiply": [
+              "$lotes.cajas",
+              "$lotes.kg_por_caja"
+            ]
+          }
+        },
+        "promedio_kg": {
+          "$avg": {
+            "$multiply": [
+              "$lotes.cajas",
+              "$lotes.kg_por_caja"
+            ]
+          }
+        },
+        "conteo": {
+          "$sum": {
+            "$const": 1
+          }
+        },
+        "$willBeMerged": false
+      },
+      "nReturned": 20,
+      "executionTimeMillisEstimate": 1210,
+      "maxAccumulatorMemoryUsageBytes": {
+        "total_kg": 4000,
+        "promedio_kg": 3520,
+        "conteo": 4000
+      },
+      "totalOutputDataSizeBytes": 10760,
+      "usedDisk": false,
+      "spills": 0,
+      "spilledDataStorageSize": 0,
+      "spilledBytes": 0,
+      "spilledRecords": 0,
+      "peakTrackedMemBytes": 13280
+    }
+  ],
+  "queryShapeHash": "BEA2E0DC109F03F5490C69D31803BC4B36D8013B11B649C47C76AF7E37D1C4CA",
+  "peakTrackedMemBytes": 13792,
+  "serverInfo": {
+    "host": "6e122550632c",
+    "port": 27017,
+    "version": "9.0.4",
+    "gitVersion": "64ade602b836c9adeffba7fa038c887ffab56196"
+  },
+  "serverParameters": {
+    "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+    "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+    "internalQueryProhibitBlockingMergeOnMongoS": 0,
+    "internalQueryFrameworkControl": "trySbeRestricted",
+    "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "command": {
+    "aggregate": "cosechas",
+    "pipeline": [
+      {
+        "$unwind": "$lotes"
+      },
+      {
+        "$match": {
+          "lotes.kg_por_caja": {
+            "$gt": 50
+          }
+        }
+      },
+      {
+        "$group": {
+          "_id": {
+            "pais": "$productor.ubicacion.country",
+            "cultivo": "$lotes.cultivo"
+          },
+          "total_kg": {
+            "$sum": {
+              "$multiply": [
+                "$lotes.cajas",
+                "$lotes.kg_por_caja"
+              ]
+            }
+          },
+          "promedio_kg": {
+            "$avg": {
+              "$multiply": [
+                "$lotes.cajas",
+                "$lotes.kg_por_caja"
+              ]
+            }
+          },
+          "conteo": {
+            "$sum": 1
+          }
+        }
+      }
+    ],
+    "cursor": {},
+    "allowDiskUse": true,
+    "$db": "document_benchmark"
+  },
+  "ok": 1.0
+}
