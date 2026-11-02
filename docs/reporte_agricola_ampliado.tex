@@ -358,6 +358,110 @@ Reproducir el procedimiento significa volver a preparar datos y consultas equiva
 
 Para una nueva ejecución sería conveniente fijar desde el inicio las condiciones de monitoreo, guardar las operaciones que terminan después del cierre y registrar el número de documentos examinados por operación. Así se podrían investigar las diferencias de percentiles y calcular con mayor fundamento el consumo solicitado por M3. Las decisiones tomadas durante esta ejecución se presentan en el método, de modo que un lector pueda distinguir el protocolo previsto de lo que ocurrió realmente.
 
+\clearpage
+\section*{Anexo: consultas del experimento agrícola}
+\addcontentsline{toc}{section}{Anexo: consultas del experimento agrícola}
+Las siguientes consultas son las usadas por el ejecutor para el caso agrícola. Los arreglos de MongoDB se presentan con sangría para facilitar su lectura; el contenido es el mismo que el de los archivos del proyecto. La configuración de disco y memoria se aplica por separado al ejecutar cada variante.
+\subsection*{Q1 en MongoDB}
+Desanida los lotes, filtra por kilogramos por caja y agrupa por país y cultivo.
+{\small\begin{verbatim}
+[
+  {
+    "$unwind": "$lotes"
+  },
+  {
+    "$match": {
+      "lotes.kg_por_caja": {
+        "$gt": 50
+      }
+    }
+  },
+  {
+    "$group": {
+      "_id": {
+        "pais": "$productor.ubicacion.country",
+        "cultivo": "$lotes.cultivo"
+      },
+      "total_kg": {
+        "$sum": {
+          "$multiply": [
+            "$lotes.cajas",
+            "$lotes.kg_por_caja"
+          ]
+        }
+      },
+      "promedio_kg": {
+        "$avg": {
+          "$multiply": [
+            "$lotes.cajas",
+            "$lotes.kg_por_caja"
+          ]
+        }
+      },
+      "conteo": {
+        "$sum": 1
+      }
+    }
+  }
+]
+\end{verbatim}}
+\subsection*{Q1 en PostgreSQL}
+Expande los lotes en JSONB y calcula los mismos grupos, sumas, promedios y conteos.
+{\small\begin{verbatim}
+SELECT data->'productor'->'ubicacion'->>'country' AS pais,
+       lote->>'cultivo' AS cultivo,
+       SUM((lote->>'cajas')::numeric *
+           (lote->>'kg_por_caja')::numeric) AS total_kg,
+       AVG((lote->>'cajas')::numeric *
+           (lote->>'kg_por_caja')::numeric) AS promedio_kg,
+       COUNT(*) AS conteo
+FROM cosechas, jsonb_array_elements(data->'lotes') AS lote
+WHERE (lote->>'kg_por_caja')::numeric > 50
+GROUP BY 1, 2;
+\end{verbatim}}
+\subsection*{Q2 en MongoDB}
+Filtra cosechas finalizadas, ordena por peso y selecciona las 1.000 mayores.
+{\small\begin{verbatim}
+[
+  {
+    "$match": {
+      "resultado.estado": "finalizada",
+      "fecha": {
+        "$gte": "2026-01-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "$sort": {
+      "resultado.total_kg": -1
+    }
+  },
+  {
+    "$limit": 1000
+  },
+  {
+    "$project": {
+      "cosecha_id": 1,
+      "productor.id": 1,
+      "resultado.total_kg": 1
+    }
+  }
+]
+\end{verbatim}}
+\subsection*{Q2 en PostgreSQL}
+Aplica el filtro, ordenamiento y límite sobre la tabla con documentos JSONB.
+{\small\begin{verbatim}
+SELECT data->>'cosecha_id' AS cosecha_id,
+       data->'productor'->>'id' AS productor_id,
+       (data->'resultado'->>'total_kg')::numeric AS total_kg
+FROM cosechas
+WHERE data->'resultado'->>'estado' = 'finalizada'
+  AND (data->>'fecha')::timestamptz >= '2026-01-01 00:00:00Z'
+ORDER BY (data->'resultado'->>'total_kg')::numeric DESC
+LIMIT 1000;
+\end{verbatim}}
+Para Q2, MongoDB se ejecutó con \texttt{allowDiskUse} activado o desactivado; PostgreSQL con \texttt{work\_mem} de 4 MB o 64 MB. Estas opciones son distintas y no representan límites equivalentes. En MongoDB la fecha se compara como cadena en formato ISO; los archivos son los de la carpeta \texttt{agricola/} del repositorio.
+
 \section*{Referencias}
 \addcontentsline{toc}{section}{Referencias}
 \begin{itemize}
